@@ -1,0 +1,1097 @@
+{
+    "resourceId": "id0",
+    "properties": {
+        "auditing": "",
+        "author": "",
+        "bpmn2_definitionsid": "",
+        "bpmn2_imports": "",
+        "categories": "",
+        "creationdate": "",
+        "datainputs": "",
+        "datainputset": "",
+        "dataoutputs": "",
+        "dataoutputset": "",
+        "defaultprocessname": "",
+        "documentation": "",
+        "errors": "",
+        "exporter": "",
+        "exporterversion": "",
+        "expressionlanguage": "http://www.w3.org/TR/XPath",
+        "flat": "",
+        "inputsets": "",
+        "interfaces": "",
+        "isclosed": false,
+        "isexecutable": false,
+        "iso9000ff": "",
+        "itemdefinitions": "",
+        "language": "English",
+        "messages": "",
+        "meta-processowner": "",
+        "meta-prozessverantwortlicher": "",
+        "modificationdate": "",
+        "monitoring": "",
+        "name": "Internship",
+        "namespaces": "",
+        "orientation": "horizontal",
+        "outputsets": "",
+        "processgoal": "",
+        "processid": "",
+        "processtype": "none",
+        "properties": "",
+        "properties2": "",
+        "prozessreifegrad": "",
+        "resources": "",
+        "revisionid": "",
+        "signals": "",
+        "targetnamespace": "http://www.signavio.com",
+        "title": "",
+        "typelanguage": "http://www.w3.org/2001/XMLSchema",
+        "version": ""
+    },
+    "stencil": {
+        "id": "BPMNDiagram"
+    },
+    "childShapes": [
+        {
+            "resourceId": "id1",
+            "properties": {
+                "adhoc": "",
+                "adhoccompletioncondition": "",
+                "adhocordering": "",
+                "auditing": "",
+                "bgcolor": "",
+                "bordercolor": "#000000",
+                "boundaryvisible": "",
+                "datainputs": "",
+                "datainputset": "",
+                "dataoutputs": "",
+                "dataoutputset": "",
+                "documentation": "",
+                "enableinstancecompensation": "",
+                "flat": "",
+                "inputsets": "",
+                "isclosed": "",
+                "isexecutable": "False",
+                "maximum": 2,
+                "minimum": 2,
+                "monitoring": "",
+                "multiinstance": "",
+                "name": "Internship Process",
+                "outputsets": "",
+                "processcategories": "",
+                "processdocumentation": "",
+                "processid": "id2",
+                "processname": "",
+                "processtype": "NONE",
+                "properties": "",
+                "properties2": "",
+                "status": "",
+                "suppressjoinfailure": ""
+            },
+            "stencil": {
+                "id": "Pool"
+            },
+            "childShapes": [
+                {
+                    "resourceId": "id3",
+                    "properties": {
+                        "auditing": "",
+                        "bgcolor": "",
+                        "bordercolor": "#000000",
+                        "documentation": "",
+                        "flat": "",
+                        "monitoring": "",
+                        "name": "Intern",
+                        "parentlane": "",
+                        "parentpool": ""
+                    },
+                    "stencil": {
+                        "id": "Lane"
+                    },
+                    "childShapes": [
+                        {
+                            "resourceId": "id4",
+                            "properties": {
+                                "applyincalc": "true",
+                                "auditing": "",
+                                "bgcolor": "#ffffff",
+                                "bordercolor": "#000000",
+                                "boundarycancelactivity2": "true",
+                                "condition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainput": "",
+                                "datainputassociations": "",
+                                "datainputassociations_throwevents": "",
+                                "datainputs": "",
+                                "dataoutput": "",
+                                "dataoutputassociations": "",
+                                "dataoutputassociations_catchevents": "",
+                                "dataoutputs": "",
+                                "documentation": "",
+                                "errorcode": "",
+                                "errorname": "",
+                                "flat": "",
+                                "frequency": "",
+                                "inputset": "",
+                                "inputsets": "",
+                                "isinterrupting": "",
+                                "messagename": "",
+                                "monitoring": "",
+                                "nachfolgerprozesse": [],
+                                "name": "Enter topic, money, experience and hobbies",
+                                "operationname": "",
+                                "outputset": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "properties": "",
+                                "properties2": "",
+                                "signalname": "",
+                                "signalref": "",
+                                "time": "",
+                                "timecycle": "",
+                                "timedate": "",
+                                "timeduration": "",
+                                "trigger": "None",
+                                "vorgngerprozesse": []
+                            },
+                            "stencil": {
+                                "id": "StartNoneEvent"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id5"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 104,
+                                    "y": 140
+                                },
+                                "upperLeft": {
+                                    "x": 74,
+                                    "y": 110
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id6",
+                            "properties": {
+                                "activitytype": "",
+                                "adhoccancelremaininginstances": "",
+                                "adhoccompletioncondition": "",
+                                "adhocordering": "",
+                                "anwers": "",
+                                "applyincalc": true,
+                                "assignments": "",
+                                "auditing": "",
+                                "behavior": "all",
+                                "bgcolor": "#FFFFCC",
+                                "bordercolor": "#000000",
+                                "callacitivity": "False",
+                                "callactivity": "",
+                                "calledelement": "",
+                                "categories": "",
+                                "completioncondition": "",
+                                "completionquantity": "",
+                                "complexbehaviordefinition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainputassociations": "",
+                                "datainputs": "",
+                                "datainputset": "",
+                                "dataoutputassociations": "",
+                                "dataoutputs": "",
+                                "dataoutputset": "",
+                                "decision": "",
+                                "diagramref": "",
+                                "documentation": "",
+                                "entry": "",
+                                "erteiltfreigabe": "",
+                                "externaldocuments": "",
+                                "flat": "",
+                                "implementation": "",
+                                "inmessagename": "",
+                                "inmsgimport": "",
+                                "inmsgiscollection": "False",
+                                "inmsgitemkind": "Information",
+                                "inmsgstructure": "",
+                                "inputdataitem": "",
+                                "inputmaps": "",
+                                "inputsets": "",
+                                "instantiate": "",
+                                "isadhoc": "",
+                                "isatransaction": "False",
+                                "isclosed": "False",
+                                "isforcompensation": "False",
+                                "loopcardinality": "",
+                                "loopcondition": "",
+                                "loopdatainput": "",
+                                "loopdataoutput": "",
+                                "loopmaximum": "",
+                                "looptype": "",
+                                "messageref": "",
+                                "meta-risikomanagement": "",
+                                "meta-risks": "",
+                                "monitoring": "",
+                                "name": "Receive offers",
+                                "nonebehavioreventref": "signal",
+                                "onebehavioreventref:": "signal",
+                                "operationname": "",
+                                "operationref": "",
+                                "outmessagename": "",
+                                "outmsgimport": "",
+                                "outmsgiscollection": "",
+                                "outmsgitemkind": "Information",
+                                "outmsgstructure": "",
+                                "outputdataitem": "",
+                                "outputmaps": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "processref": "",
+                                "properties": "",
+                                "properties2": "",
+                                "question": "",
+                                "resources": "",
+                                "risikenundkontrollen": "",
+                                "script": "",
+                                "scriptformat": "",
+                                "startquantity": "",
+                                "subprocesstype": "",
+                                "tasktype": "None",
+                                "testbefore": "false",
+                                "time": "",
+                                "transaction": "",
+                                "transactionmethod": "",
+                                "wirdinformiert": [],
+                                "wirdkonsultiert": []
+                            },
+                            "stencil": {
+                                "id": "Task"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id7"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 324,
+                                    "y": 230
+                                },
+                                "upperLeft": {
+                                    "x": 224,
+                                    "y": 150
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id8",
+                            "properties": {
+                                "activationcondition": "",
+                                "assignments": "",
+                                "auditing": "",
+                                "bgcolor": "#ffffff",
+                                "bordercolor": "#000000",
+                                "categories": "",
+                                "defaultgate": "",
+                                "documentation": "",
+                                "eventtype": "",
+                                "flat": "",
+                                "gate_assignments": "",
+                                "gate_outgoingsequenceflow": "",
+                                "gates": "",
+                                "gates_assignments": "",
+                                "gates_outgoingsequenceflow": "",
+                                "gatewaytype": "XOR",
+                                "incomingcondition": "",
+                                "lanes": "",
+                                "markervisible": "true",
+                                "monitoring": "",
+                                "name": "",
+                                "outgoingcondition": "",
+                                "pool": "",
+                                "processid": "",
+                                "xortype": "Data"
+                            },
+                            "stencil": {
+                                "id": "Exclusive_Databased_Gateway"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id9"
+                                },
+                                {
+                                    "resourceId": "id10"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 189,
+                                    "y": 145
+                                },
+                                "upperLeft": {
+                                    "x": 149,
+                                    "y": 105
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id11",
+                            "properties": {
+                                "applyincalc": "true",
+                                "auditing": "",
+                                "bgcolor": "#ffffff",
+                                "bordercolor": "#000000",
+                                "boundarycancelactivity2": "true",
+                                "condition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainput": "",
+                                "datainputassociations": "",
+                                "datainputassociations_throwevents": "",
+                                "datainputs": "",
+                                "dataoutput": "",
+                                "dataoutputassociations": "",
+                                "dataoutputassociations_catchevents": "",
+                                "dataoutputs": "",
+                                "documentation": "",
+                                "errorcode": "",
+                                "errorname": "",
+                                "flat": "",
+                                "frequency": "",
+                                "inputset": "",
+                                "inputsets": "",
+                                "isinterrupting": "",
+                                "messagename": "",
+                                "monitoring": "",
+                                "nachfolgerprozesse": [],
+                                "name": "Offer accepted",
+                                "operationname": "",
+                                "outputset": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "properties": "",
+                                "properties2": "",
+                                "signalname": "",
+                                "signalref": "",
+                                "time": "",
+                                "timecycle": "",
+                                "timedate": "",
+                                "timeduration": "",
+                                "trigger": "None",
+                                "vorgngerprozesse": []
+                            },
+                            "stencil": {
+                                "id": "EndNoneEvent"
+                            },
+                            "childShapes": [],
+                            "outgoing": [],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 449,
+                                    "y": 79
+                                },
+                                "upperLeft": {
+                                    "x": 423,
+                                    "y": 53
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id12",
+                            "properties": {
+                                "activitytype": "",
+                                "adhoccancelremaininginstances": "",
+                                "adhoccompletioncondition": "",
+                                "adhocordering": "",
+                                "anwers": "",
+                                "applyincalc": true,
+                                "assignments": "",
+                                "auditing": "",
+                                "behavior": "all",
+                                "bgcolor": "#FFFFCC",
+                                "bordercolor": "#000000",
+                                "callacitivity": "False",
+                                "callactivity": "",
+                                "calledelement": "",
+                                "categories": "",
+                                "completioncondition": "",
+                                "completionquantity": "",
+                                "complexbehaviordefinition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainputassociations": "",
+                                "datainputs": "",
+                                "datainputset": "",
+                                "dataoutputassociations": "",
+                                "dataoutputs": "",
+                                "dataoutputset": "",
+                                "decision": "",
+                                "diagramref": "",
+                                "documentation": "",
+                                "entry": "",
+                                "erteiltfreigabe": "",
+                                "externaldocuments": "",
+                                "flat": "",
+                                "implementation": "",
+                                "inmessagename": "",
+                                "inmsgimport": "",
+                                "inmsgiscollection": "False",
+                                "inmsgitemkind": "Information",
+                                "inmsgstructure": "",
+                                "inputdataitem": "",
+                                "inputmaps": "",
+                                "inputsets": "",
+                                "instantiate": "",
+                                "isadhoc": "",
+                                "isatransaction": "False",
+                                "isclosed": "False",
+                                "isforcompensation": "False",
+                                "loopcardinality": "",
+                                "loopcondition": "",
+                                "loopdatainput": "",
+                                "loopdataoutput": "",
+                                "loopmaximum": "",
+                                "looptype": "",
+                                "messageref": "",
+                                "meta-risikomanagement": "",
+                                "meta-risks": "",
+                                "monitoring": "",
+                                "name": "Write status updates",
+                                "nonebehavioreventref": "signal",
+                                "onebehavioreventref:": "signal",
+                                "operationname": "",
+                                "operationref": "",
+                                "outmessagename": "",
+                                "outmsgimport": "",
+                                "outmsgiscollection": "",
+                                "outmsgitemkind": "Information",
+                                "outmsgstructure": "",
+                                "outputdataitem": "",
+                                "outputmaps": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "processref": "",
+                                "properties": "",
+                                "properties2": "",
+                                "question": "",
+                                "resources": "",
+                                "risikenundkontrollen": "",
+                                "script": "",
+                                "scriptformat": "",
+                                "startquantity": "",
+                                "subprocesstype": "",
+                                "tasktype": "None",
+                                "testbefore": "false",
+                                "time": "",
+                                "transaction": "",
+                                "transactionmethod": "",
+                                "wirdinformiert": [],
+                                "wirdkonsultiert": []
+                            },
+                            "stencil": {
+                                "id": "Task"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id13"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 503,
+                                    "y": 230
+                                },
+                                "upperLeft": {
+                                    "x": 373,
+                                    "y": 149
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id14",
+                            "properties": {
+                                "activitytype": "",
+                                "adhoccancelremaininginstances": "",
+                                "adhoccompletioncondition": "",
+                                "adhocordering": "",
+                                "anwers": "",
+                                "applyincalc": true,
+                                "assignments": "",
+                                "auditing": "",
+                                "behavior": "all",
+                                "bgcolor": "#FFFFCC",
+                                "bordercolor": "#000000",
+                                "callacitivity": "False",
+                                "callactivity": "",
+                                "calledelement": "",
+                                "categories": "",
+                                "completioncondition": "",
+                                "completionquantity": "",
+                                "complexbehaviordefinition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainputassociations": "",
+                                "datainputs": "",
+                                "datainputset": "",
+                                "dataoutputassociations": "",
+                                "dataoutputs": "",
+                                "dataoutputset": "",
+                                "decision": "",
+                                "diagramref": "",
+                                "documentation": "",
+                                "entry": "",
+                                "erteiltfreigabe": "",
+                                "externaldocuments": "",
+                                "flat": "",
+                                "implementation": "",
+                                "inmessagename": "",
+                                "inmsgimport": "",
+                                "inmsgiscollection": "False",
+                                "inmsgitemkind": "Information",
+                                "inmsgstructure": "",
+                                "inputdataitem": "",
+                                "inputmaps": "",
+                                "inputsets": "",
+                                "instantiate": "",
+                                "isadhoc": "",
+                                "isatransaction": "False",
+                                "isclosed": "False",
+                                "isforcompensation": "False",
+                                "loopcardinality": "",
+                                "loopcondition": "",
+                                "loopdatainput": "",
+                                "loopdataoutput": "",
+                                "loopmaximum": "",
+                                "looptype": "",
+                                "messageref": "",
+                                "meta-risikomanagement": "",
+                                "meta-risks": "",
+                                "monitoring": "",
+                                "name": "Recommend company to friends",
+                                "nonebehavioreventref": "signal",
+                                "onebehavioreventref:": "signal",
+                                "operationname": "",
+                                "operationref": "",
+                                "outmessagename": "",
+                                "outmsgimport": "",
+                                "outmsgiscollection": "",
+                                "outmsgitemkind": "Information",
+                                "outmsgstructure": "",
+                                "outputdataitem": "",
+                                "outputmaps": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "processref": "",
+                                "properties": "",
+                                "properties2": "",
+                                "question": "",
+                                "resources": "",
+                                "risikenundkontrollen": "",
+                                "script": "",
+                                "scriptformat": "",
+                                "startquantity": "",
+                                "subprocesstype": "",
+                                "tasktype": "None",
+                                "testbefore": "false",
+                                "time": "",
+                                "transaction": "",
+                                "transactionmethod": "",
+                                "wirdinformiert": [],
+                                "wirdkonsultiert": []
+                            },
+                            "stencil": {
+                                "id": "Task"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id15"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 324,
+                                    "y": 108
+                                },
+                                "upperLeft": {
+                                    "x": 224,
+                                    "y": 28
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        }
+                    ],
+                    "outgoing": [],
+                    "bounds": {
+                        "lowerRight": {
+                            "x": 1461,
+                            "y": 250.0
+                        },
+                        "upperLeft": {
+                            "x": 30,
+                            "y": 0
+                        }
+                    },
+                    "dockers": [],
+                    "target": {
+                        "resourceId": ""
+                    },
+                    "labelDirtyStates": {}
+                },
+                {
+                    "resourceId": "id16",
+                    "properties": {
+                        "auditing": "",
+                        "bgcolor": "",
+                        "bordercolor": "#000000",
+                        "documentation": "",
+                        "flat": "",
+                        "monitoring": "",
+                        "name": "Company",
+                        "parentlane": "",
+                        "parentpool": ""
+                    },
+                    "stencil": {
+                        "id": "Lane"
+                    },
+                    "childShapes": [
+                        {
+                            "resourceId": "id17",
+                            "properties": {
+                                "activitytype": "",
+                                "adhoccancelremaininginstances": "",
+                                "adhoccompletioncondition": "",
+                                "adhocordering": "",
+                                "anwers": "",
+                                "applyincalc": true,
+                                "assignments": "",
+                                "auditing": "",
+                                "behavior": "all",
+                                "bgcolor": "#FFFFCC",
+                                "bordercolor": "#000000",
+                                "callacitivity": "False",
+                                "callactivity": "",
+                                "calledelement": "",
+                                "categories": "",
+                                "completioncondition": "",
+                                "completionquantity": "",
+                                "complexbehaviordefinition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainputassociations": "",
+                                "datainputs": "",
+                                "datainputset": "",
+                                "dataoutputassociations": "",
+                                "dataoutputs": "",
+                                "dataoutputset": "",
+                                "decision": "",
+                                "diagramref": "",
+                                "documentation": "",
+                                "entry": "",
+                                "erteiltfreigabe": "",
+                                "externaldocuments": "",
+                                "flat": "",
+                                "implementation": "",
+                                "inmessagename": "",
+                                "inmsgimport": "",
+                                "inmsgiscollection": "False",
+                                "inmsgitemkind": "Information",
+                                "inmsgstructure": "",
+                                "inputdataitem": "",
+                                "inputmaps": "",
+                                "inputsets": "",
+                                "instantiate": "",
+                                "isadhoc": "",
+                                "isatransaction": "False",
+                                "isclosed": "False",
+                                "isforcompensation": "False",
+                                "loopcardinality": "",
+                                "loopcondition": "",
+                                "loopdatainput": "",
+                                "loopdataoutput": "",
+                                "loopmaximum": "",
+                                "looptype": "",
+                                "messageref": "",
+                                "meta-risikomanagement": "",
+                                "meta-risks": "",
+                                "monitoring": "",
+                                "name": "Send offers",
+                                "nonebehavioreventref": "signal",
+                                "onebehavioreventref:": "signal",
+                                "operationname": "",
+                                "operationref": "",
+                                "outmessagename": "",
+                                "outmsgimport": "",
+                                "outmsgiscollection": "",
+                                "outmsgitemkind": "Information",
+                                "outmsgstructure": "",
+                                "outputdataitem": "",
+                                "outputmaps": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "processref": "",
+                                "properties": "",
+                                "properties2": "",
+                                "question": "",
+                                "resources": "",
+                                "risikenundkontrollen": "",
+                                "script": "",
+                                "scriptformat": "",
+                                "startquantity": "",
+                                "subprocesstype": "",
+                                "tasktype": "None",
+                                "testbefore": "false",
+                                "time": "",
+                                "transaction": "",
+                                "transactionmethod": "",
+                                "wirdinformiert": [],
+                                "wirdkonsultiert": []
+                            },
+                            "stencil": {
+                                "id": "Task"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id18"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 504,
+                                    "y": 151
+                                },
+                                "upperLeft": {
+                                    "x": 371,
+                                    "y": 71
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id19",
+                            "properties": {
+                                "activitytype": "",
+                                "adhoccancelremaininginstances": "",
+                                "adhoccompletioncondition": "",
+                                "adhocordering": "",
+                                "anwers": "",
+                                "applyincalc": true,
+                                "assignments": "",
+                                "auditing": "",
+                                "behavior": "all",
+                                "bgcolor": "#FFFFCC",
+                                "bordercolor": "#000000",
+                                "callacitivity": "False",
+                                "callactivity": "",
+                                "calledelement": "",
+                                "categories": "",
+                                "completioncondition": "",
+                                "completionquantity": "",
+                                "complexbehaviordefinition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainputassociations": "",
+                                "datainputs": "",
+                                "datainputset": "",
+                                "dataoutputassociations": "",
+                                "dataoutputs": "",
+                                "dataoutputset": "",
+                                "decision": "",
+                                "diagramref": "",
+                                "documentation": "",
+                                "entry": "",
+                                "erteiltfreigabe": "",
+                                "externaldocuments": "",
+                                "flat": "",
+                                "implementation": "",
+                                "inmessagename": "",
+                                "inmsgimport": "",
+                                "inmsgiscollection": "False",
+                                "inmsgitemkind": "Information",
+                                "inmsgstructure": "",
+                                "inputdataitem": "",
+                                "inputmaps": "",
+                                "inputsets": "",
+                                "instantiate": "",
+                                "isadhoc": "",
+                                "isatransaction": "False",
+                                "isclosed": "False",
+                                "isforcompensation": "False",
+                                "loopcardinality": "",
+                                "loopcondition": "",
+                                "loopdatainput": "",
+                                "loopdataoutput": "",
+                                "loopmaximum": "",
+                                "looptype": "",
+                                "messageref": "",
+                                "meta-risikomanagement": "",
+                                "meta-risks": "",
+                                "monitoring": "",
+                                "name": "Write status updates",
+                                "nonebehavioreventref": "signal",
+                                "onebehavioreventref:": "signal",
+                                "operationname": "",
+                                "operationref": "",
+                                "outmessagename": "",
+                                "outmsgimport": "",
+                                "outmsgiscollection": "",
+                                "outmsgitemkind": "Information",
+                                "outmsgstructure": "",
+                                "outputdataitem": "",
+                                "outputmaps": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "processref": "",
+                                "properties": "",
+                                "properties2": "",
+                                "question": "",
+                                "resources": "",
+                                "risikenundkontrollen": "",
+                                "script": "",
+                                "scriptformat": "",
+                                "startquantity": "",
+                                "subprocesstype": "",
+                                "tasktype": "None",
+                                "testbefore": "false",
+                                "time": "",
+                                "transaction": "",
+                                "transactionmethod": "",
+                                "wirdinformiert": [],
+                                "wirdkonsultiert": []
+                            },
+                            "stencil": {
+                                "id": "Task"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id20"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 588,
+                                    "y": 131
+                                },
+                                "upperLeft": {
+                                    "x": 548,
+                                    "y": 91
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        },
+                        {
+                            "resourceId": "id21",
+                            "properties": {
+                                "activitytype": "",
+                                "adhoccancelremaininginstances": "",
+                                "adhoccompletioncondition": "",
+                                "adhocordering": "",
+                                "anwers": "",
+                                "applyincalc": true,
+                                "assignments": "",
+                                "auditing": "",
+                                "behavior": "all",
+                                "bgcolor": "#FFFFCC",
+                                "bordercolor": "#000000",
+                                "callacitivity": "False",
+                                "callactivity": "",
+                                "calledelement": "",
+                                "categories": "",
+                                "completioncondition": "",
+                                "completionquantity": "",
+                                "complexbehaviordefinition": "",
+                                "costcenter": "",
+                                "costs": "",
+                                "datainputassociations": "",
+                                "datainputs": "",
+                                "datainputset": "",
+                                "dataoutputassociations": "",
+                                "dataoutputs": "",
+                                "dataoutputset": "",
+                                "decision": "",
+                                "diagramref": "",
+                                "documentation": "",
+                                "entry": "",
+                                "erteiltfreigabe": "",
+                                "externaldocuments": "",
+                                "flat": "",
+                                "implementation": "",
+                                "inmessagename": "",
+                                "inmsgimport": "",
+                                "inmsgiscollection": "False",
+                                "inmsgitemkind": "Information",
+                                "inmsgstructure": "",
+                                "inputdataitem": "",
+                                "inputmaps": "",
+                                "inputsets": "",
+                                "instantiate": "",
+                                "isadhoc": "",
+                                "isatransaction": "False",
+                                "isclosed": "False",
+                                "isforcompensation": "False",
+                                "loopcardinality": "",
+                                "loopcondition": "",
+                                "loopdatainput": "",
+                                "loopdataoutput": "",
+                                "loopmaximum": "",
+                                "looptype": "",
+                                "messageref": "",
+                                "meta-risikomanagement": "",
+                                "meta-risks": "",
+                                "monitoring": "",
+                                "name": "End of internship",
+                                "nonebehavioreventref": "signal",
+                                "onebehavioreventref:": "signal",
+                                "operationname": "",
+                                "operationref": "",
+                                "outmessagename": "",
+                                "outmsgimport": "",
+                                "outmsgiscollection": "",
+                                "outmsgitemkind": "Information",
+                                "outmsgstructure": "",
+                                "outputdataitem": "",
+                                "outputmaps": "",
+                                "outputsets": "",
+                                "processid": "",
+                                "processref": "",
+                                "properties": "",
+                                "properties2": "",
+                                "question": "",
+                                "resources": "",
+                                "risikenundkontrollen": "",
+                                "script": "",
+                                "scriptformat": "",
+                                "startquantity": "",
+                                "subprocesstype": "",
+                                "tasktype": "None",
+                                "testbefore": "false",
+                                "time": "",
+                                "transaction": "",
+                                "transactionmethod": "",
+                                "wirdinformiert": [],
+                                "wirdkonsultiert": []
+                            },
+                            "stencil": {
+                                "id": "Task"
+                            },
+                            "childShapes": [],
+                            "outgoing": [
+                                {
+                                    "resourceId": "id22"
+                                }
+                            ],
+                            "bounds": {
+                                "lowerRight": {
+                                    "x": 949.0,
+                                    "y": 150
+                                },
+                                "upperLeft": {
+                                    "x": 809.0,
+                                    "y": 73
+                                }
+                            },
+                            "dockers": [],
+                            "target": {
+                                "resourceId": ""
+                            },
+                            "labelDirtyStates": {}
+                        }
+                    ],
+                    "outgoing": [],
+                    "bounds": {
+                        "lowerRight": {
+                            "x": 1461,
+                            "y": 483
+                        },
+                        "upperLeft": {
+                            "x": 30,
+                            "y": 250.0
+                        }
+                    },
+                    "dockers": [],
+                    "target": {
+                        "resourceId": ""
+                    },
+                    "labelDirtyStates": {}
+                }
+            ],
+            "outgoing": [],
+            "bounds": {
+                "lowerRight": {
+                    "x": 1492,
+                    "y": 656.6
+                },
+                "upperLeft": {
+                    "x": 31,
+                    "y": 30
+                }
+            },
+            "dockers": [],
+            "target": {
+                "resourceId": ""
+            },
+            "labelDirtyStates": {}
+        }
+    ],
+    "bounds": {
+        "lowerRight": {
+            "x": 1592,
+            "y": 1050
+        },
+        "upperLeft": {
+            "x": 0,
+            "y": 0
+        }
+    },
+    "stencilset": {
+        "url": "/stencilsets/bpmn2.0/bpmn2.0.json?version=14.12.1",
+        "namespace": "http://b3mn.org/stencilset/bpmn2.0#"
+    },
+    "ssextensions": [],
+    "glossaryLinkRevisions": {}
+}
