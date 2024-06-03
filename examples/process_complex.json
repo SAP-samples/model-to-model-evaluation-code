@@ -1,0 +1,2227 @@
+{
+  "resourceId": "9da5019b-70cf-44a7-a699-1a1d77a5a6b0",
+  "bounds": {
+    "upperLeft": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "lowerRight": {
+      "x": 2560.0,
+      "y": 1120.0
+    }
+  },
+  "stencil": {
+    "id": "BPMNDiagram"
+  },
+  "stencilset": {
+    "namespace": "http://b3mn.org/stencilset/bpmn2.0#"
+  },
+  "childShapes": [
+    {
+      "resourceId": "4ac09f26-f5a0-4bc2-abf9-9ef1d0a91191",
+      "bounds": {
+        "upperLeft": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "lowerRight": {
+          "x": 2560.0,
+          "y": 1120.0
+        }
+      },
+      "stencil": {
+        "id": "Pool"
+      },
+      "dockers": [],
+      "properties": {},
+      "outgoing": [],
+      "target": null,
+      "childShapes": [
+        {
+          "resourceId": "eb1f3d22-3da8-4ffe-866c-f9f78e6416d5",
+          "bounds": {
+            "upperLeft": {
+              "x": 30.0,
+              "y": 980.0
+            },
+            "lowerRight": {
+              "x": 2560.0,
+              "y": 1120.0
+            }
+          },
+          "stencil": {
+            "id": "Lane"
+          },
+          "dockers": [],
+          "properties": {},
+          "outgoing": [],
+          "target": null,
+          "childShapes": [
+            {
+              "resourceId": "c8cc9585-06b9-49aa-b6b4-2cf634dbf0e0",
+              "bounds": {
+                "upperLeft": {
+                  "x": 960.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 1060.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Inform MCS about communication to customer"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "6136200e-90b3-4e5c-a489-e739e4472305"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            }
+          ]
+        },
+        {
+          "resourceId": "00c17cdc-9295-419f-b100-b094e03916b3",
+          "bounds": {
+            "upperLeft": {
+              "x": 30.0,
+              "y": 560.0
+            },
+            "lowerRight": {
+              "x": 2560.0,
+              "y": 980.0
+            }
+          },
+          "stencil": {
+            "id": "Lane"
+          },
+          "dockers": [],
+          "properties": {},
+          "outgoing": [],
+          "target": null,
+          "childShapes": [
+            {
+              "resourceId": "1cff628c-0104-4851-bcd5-655cfd4b722d",
+              "bounds": {
+                "upperLeft": {
+                  "x": 480.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 580.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Assure required information is provided in email"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "8423d1b8-1905-45ab-acd5-010a9bef5288"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "1aa00f92-bf35-43bf-aeb0-ff2514a7b5da",
+              "bounds": {
+                "upperLeft": {
+                  "x": 640.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 740.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Schedule call after two business days"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "fe1cd971-2e75-4777-a5c5-1ae2a6180dee"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "ec78de79-121f-4069-84c8-7cb6c62f2841",
+              "bounds": {
+                "upperLeft": {
+                  "x": 800.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 900.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Send email to decision maker"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "2383393d-bae5-4b20-aa93-c0832445b32b"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "902d6911-66fe-4118-9166-5e63be663e75",
+              "bounds": {
+                "upperLeft": {
+                  "x": 190.0,
+                  "y": 190.0
+                },
+                "lowerRight": {
+                  "x": 230.0,
+                  "y": 230.0
+                }
+              },
+              "stencil": {
+                "id": "Exclusive_Databased_Gateway"
+              },
+              "dockers": [],
+              "properties": {},
+              "outgoing": [
+                {
+                  "resourceId": "81c8da0c-0205-4d4b-870a-34ffca4984cc"
+                },
+                {
+                  "resourceId": "6a056bad-6352-4157-8e58-433e7904b46f"
+                },
+                {
+                  "resourceId": "e0ab8bbd-4b30-4b6a-85f3-bd2a3999a75f"
+                },
+                {
+                  "resourceId": "e8413065-466f-4869-9009-3fa159271206"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "8d4deb89-c515-4991-9929-cef74fdbf100",
+              "bounds": {
+                "upperLeft": {
+                  "x": 960.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 1060.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Send information by email"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "fceb180a-6334-4ba6-8ad1-b941534cbce1"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "93c8c8fa-a5b6-4b95-b1ad-90ec89e61ef1",
+              "bounds": {
+                "upperLeft": {
+                  "x": 320.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 420.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Evaluate customer information need"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "4e7c5b18-fe29-48cc-b5fe-6e687a0838cc"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "4f8e50b7-fa43-4543-bdec-5dd6e3abf340",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1280.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 1380.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Reminder call to customer"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "4bcb8252-253b-4d92-8ba0-c0c6d19afc10"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "81457d18-5286-4969-a276-172dcac62703",
+              "bounds": {
+                "upperLeft": {
+                  "x": 35.0,
+                  "y": 195.0
+                },
+                "lowerRight": {
+                  "x": 65.0,
+                  "y": 225.0
+                }
+              },
+              "stencil": {
+                "id": "StartNoneEvent"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Start"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "50fb161a-d559-4421-8dda-dc3152406e54"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "086682cc-5c59-419e-bd30-9c75e55209af",
+              "bounds": {
+                "upperLeft": {
+                  "x": 320.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 420.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Register quotation decision"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "8b973654-4ab1-4352-9aa2-69731ed52db1"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416",
+              "bounds": {
+                "upperLeft": {
+                  "x": 2270.0,
+                  "y": 190.0
+                },
+                "lowerRight": {
+                  "x": 2310.0,
+                  "y": 230.0
+                }
+              },
+              "stencil": {
+                "id": "InclusiveGateway"
+              },
+              "dockers": [],
+              "properties": {},
+              "outgoing": [
+                {
+                  "resourceId": "925d2bc8-215d-4664-ac02-1024c7d903d1"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "542d2689-338d-4061-b38c-69efcf3f4503",
+              "bounds": {
+                "upperLeft": {
+                  "x": 640.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 740.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Contact customer by phone"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "acabfaa9-3bc1-41d7-bbcd-4d9da7c5597e"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "153439f4-6fae-4e4b-a862-a25adf3bfbf3",
+              "bounds": {
+                "upperLeft": {
+                  "x": 2435.0,
+                  "y": 195.0
+                },
+                "lowerRight": {
+                  "x": 2465.0,
+                  "y": 225.0
+                }
+              },
+              "stencil": {
+                "id": "EndNoneEvent"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "End"
+              },
+              "outgoing": [],
+              "target": null,
+              "childShapes": []
+            }
+          ]
+        },
+        {
+          "resourceId": "73242bdd-01f1-49bf-b4ef-11afc87a7865",
+          "bounds": {
+            "upperLeft": {
+              "x": 30.0,
+              "y": 0.0
+            },
+            "lowerRight": {
+              "x": 2560.0,
+              "y": 560.0
+            }
+          },
+          "stencil": {
+            "id": "Lane"
+          },
+          "dockers": [],
+          "properties": {},
+          "outgoing": [],
+          "target": null,
+          "childShapes": [
+            {
+              "resourceId": "269e8cab-2e43-4cfd-b09a-e1e983452261",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1630.0,
+                  "y": 330.0
+                },
+                "lowerRight": {
+                  "x": 1670.0,
+                  "y": 370.0
+                }
+              },
+              "stencil": {
+                "id": "ParallelGateway"
+              },
+              "dockers": [],
+              "properties": {},
+              "outgoing": [
+                {
+                  "resourceId": "059a4036-3ff3-4dcb-8be6-769dd44e1e91"
+                },
+                {
+                  "resourceId": "446bc056-1b22-4532-a5cd-7de6f9020d00"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "21b692b4-94a6-4457-961d-ac23fe173efb",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1760.0,
+                  "y": 170.0
+                },
+                "lowerRight": {
+                  "x": 1860.0,
+                  "y": 250.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Send back repaired and charge for repair"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "32662129-a46b-462b-9b22-936f7cf8fb27"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "09d05dcf-4c2e-49fe-a5f8-8ad1222375f4",
+              "bounds": {
+                "upperLeft": {
+                  "x": 800.0,
+                  "y": 170.0
+                },
+                "lowerRight": {
+                  "x": 900.0,
+                  "y": 250.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Inform customer about unrepaired/repaired tool return"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "080e7c7a-a656-4c10-9140-1679078cbd27"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "dbae382f-2ccf-427e-a1f4-28e4eed662f8",
+              "bounds": {
+                "upperLeft": {
+                  "x": 480.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 580.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Fulfill customer request"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "7e750100-1c62-41de-8be4-611125629402"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "3b40d812-ceb5-4d08-8eef-8c42a84c7239",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1760.0,
+                  "y": 450.0
+                },
+                "lowerRight": {
+                  "x": 1860.0,
+                  "y": 530.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Send back unrepaired"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "c8e49efb-6d83-440c-90b3-3a370524a87b"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "21af7e4d-08b0-4789-acbf-708315955964",
+              "bounds": {
+                "upperLeft": {
+                  "x": 320.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 420.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Place spare parts on Perkute"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "b6a11e46-3225-49bb-9510-6b1a10cff483"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "4634ab7e-08e9-46d2-91f7-402ae78de93f",
+              "bounds": {
+                "upperLeft": {
+                  "x": 640.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 740.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Execute request on same business day"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "a7033a2a-ad18-41d8-96eb-d113b4ba0a6c"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "4312211c-41d9-485d-9637-5fa2795cdaf5",
+              "bounds": {
+                "upperLeft": {
+                  "x": 480.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 580.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Wash remaining parts on press washer"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "779d30fe-ba57-4fda-81b5-6f958c587fe5"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "ac1e4fcd-8bd5-42c3-969a-bb841ef0ab92",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1950.0,
+                  "y": 330.0
+                },
+                "lowerRight": {
+                  "x": 1990.0,
+                  "y": 370.0
+                }
+              },
+              "stencil": {
+                "id": "ParallelGateway"
+              },
+              "dockers": [],
+              "properties": {},
+              "outgoing": [
+                {
+                  "resourceId": "9be87ae9-6797-4d30-8c29-cfa4f98748d5"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "286ea669-ddb5-4f5d-9dc9-edc5ff6c00ed",
+              "bounds": {
+                "upperLeft": {
+                  "x": 2080.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 2180.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Start repair tool process"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "e5c02e6c-8248-4d8f-adda-16e86182b6b2"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "c8b1cb68-8571-47ee-93eb-353e666668c4",
+              "bounds": {
+                "upperLeft": {
+                  "x": 480.0,
+                  "y": 170.0
+                },
+                "lowerRight": {
+                  "x": 580.0,
+                  "y": 250.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Communicate analysis result to customer"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "7113b6f6-31ec-459f-82bf-5b94d7df352a"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "b4c8c05f-8a4e-4d10-b2bb-026a93a6a918",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1120.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 1220.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Inform customer by letter"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "f231ea4a-cf74-484d-8ad9-76bcf5c18742"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "12c19375-69bf-47d1-ac96-2ef82d765e25",
+              "bounds": {
+                "upperLeft": {
+                  "x": 800.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 900.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Follow global standard for detergent"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "31ce0372-d6e4-43ef-904d-886678929ce8"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "5d0d4833-0d4c-4512-85db-174c195407b7",
+              "bounds": {
+                "upperLeft": {
+                  "x": 640.0,
+                  "y": 30.0
+                },
+                "lowerRight": {
+                  "x": 740.0,
+                  "y": 110.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Dry parts"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "595618f9-6bb7-4c81-96e5-d0caa5a14d86"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "5e4edd31-fa2c-4c92-ae25-7a5c7f9de107",
+              "bounds": {
+                "upperLeft": {
+                  "x": 1440.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 1540.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Qualify notification for send back unrepaired/repaired"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "78d1a733-f072-4171-a5cb-a0aedd34db6c"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "75daaf82-d31e-44ef-9267-63ce93163b56",
+              "bounds": {
+                "upperLeft": {
+                  "x": 800.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 900.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Execute request on next business day"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "05ebad9f-2677-4fc5-bada-73d8cb5b2a8b"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            },
+            {
+              "resourceId": "6f3cd4fe-9518-4276-a018-0088bea74570",
+              "bounds": {
+                "upperLeft": {
+                  "x": 320.0,
+                  "y": 310.0
+                },
+                "lowerRight": {
+                  "x": 420.0,
+                  "y": 390.0
+                }
+              },
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "Start tool analysis"
+              },
+              "outgoing": [
+                {
+                  "resourceId": "d03a4f32-b53b-4e5c-92cd-a359724fd351"
+                }
+              ],
+              "target": null,
+              "childShapes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceId": "059a4036-3ff3-4dcb-8be6-769dd44e1e91",
+      "bounds": {
+        "upperLeft": {
+          "x": 1660.0,
+          "y": 170.0
+        },
+        "lowerRight": {
+          "x": 1890.0,
+          "y": 370.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 1680.0,
+          "y": 210.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "21b692b4-94a6-4457-961d-ac23fe173efb"
+        }
+      ],
+      "target": {
+        "resourceId": "21b692b4-94a6-4457-961d-ac23fe173efb"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "446bc056-1b22-4532-a5cd-7de6f9020d00",
+      "bounds": {
+        "upperLeft": {
+          "x": 1660.0,
+          "y": 330.0
+        },
+        "lowerRight": {
+          "x": 1890.0,
+          "y": 530.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 1680.0,
+          "y": 490.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "3b40d812-ceb5-4d08-8eef-8c42a84c7239"
+        }
+      ],
+      "target": {
+        "resourceId": "3b40d812-ceb5-4d08-8eef-8c42a84c7239"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "32662129-a46b-462b-9b22-936f7cf8fb27",
+      "bounds": {
+        "upperLeft": {
+          "x": 1790.0,
+          "y": 170.0
+        },
+        "lowerRight": {
+          "x": 2020.0,
+          "y": 370.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 2000.0,
+          "y": 210.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "ac1e4fcd-8bd5-42c3-969a-bb841ef0ab92"
+        }
+      ],
+      "target": {
+        "resourceId": "ac1e4fcd-8bd5-42c3-969a-bb841ef0ab92"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "080e7c7a-a656-4c10-9140-1679078cbd27",
+      "bounds": {
+        "upperLeft": {
+          "x": 830.0,
+          "y": 170.0
+        },
+        "lowerRight": {
+          "x": 1090.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 960.0,
+          "y": 210.0
+        },
+        {
+          "x": 960.0,
+          "y": 910.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "8d4deb89-c515-4991-9929-cef74fdbf100"
+        }
+      ],
+      "target": {
+        "resourceId": "8d4deb89-c515-4991-9929-cef74fdbf100"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "7e750100-1c62-41de-8be4-611125629402",
+      "bounds": {
+        "upperLeft": {
+          "x": 510.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 770.0,
+          "y": 390.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "4634ab7e-08e9-46d2-91f7-402ae78de93f"
+        }
+      ],
+      "target": {
+        "resourceId": "4634ab7e-08e9-46d2-91f7-402ae78de93f"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "8423d1b8-1905-45ab-acd5-010a9bef5288",
+      "bounds": {
+        "upperLeft": {
+          "x": 510.0,
+          "y": 590.0
+        },
+        "lowerRight": {
+          "x": 770.0,
+          "y": 670.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "1aa00f92-bf35-43bf-aeb0-ff2514a7b5da"
+        }
+      ],
+      "target": {
+        "resourceId": "1aa00f92-bf35-43bf-aeb0-ff2514a7b5da"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "fe1cd971-2e75-4777-a5c5-1ae2a6180dee",
+      "bounds": {
+        "upperLeft": {
+          "x": 670.0,
+          "y": 590.0
+        },
+        "lowerRight": {
+          "x": 930.0,
+          "y": 670.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "ec78de79-121f-4069-84c8-7cb6c62f2841"
+        }
+      ],
+      "target": {
+        "resourceId": "ec78de79-121f-4069-84c8-7cb6c62f2841"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "c8e49efb-6d83-440c-90b3-3a370524a87b",
+      "bounds": {
+        "upperLeft": {
+          "x": 1790.0,
+          "y": 330.0
+        },
+        "lowerRight": {
+          "x": 2020.0,
+          "y": 530.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 2000.0,
+          "y": 490.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "ac1e4fcd-8bd5-42c3-969a-bb841ef0ab92"
+        }
+      ],
+      "target": {
+        "resourceId": "ac1e4fcd-8bd5-42c3-969a-bb841ef0ab92"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "2383393d-bae5-4b20-aa93-c0832445b32b",
+      "bounds": {
+        "upperLeft": {
+          "x": 830.0,
+          "y": 590.0
+        },
+        "lowerRight": {
+          "x": 1090.0,
+          "y": 1090.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 960.0,
+          "y": 630.0
+        },
+        {
+          "x": 960.0,
+          "y": 1050.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "c8cc9585-06b9-49aa-b6b4-2cf634dbf0e0"
+        }
+      ],
+      "target": {
+        "resourceId": "c8cc9585-06b9-49aa-b6b4-2cf634dbf0e0"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "81c8da0c-0205-4d4b-870a-34ffca4984cc",
+      "bounds": {
+        "upperLeft": {
+          "x": 220.0,
+          "y": 750.0
+        },
+        "lowerRight": {
+          "x": 450.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 240.0,
+          "y": 910.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "086682cc-5c59-419e-bd30-9c75e55209af"
+        }
+      ],
+      "target": {
+        "resourceId": "086682cc-5c59-419e-bd30-9c75e55209af"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "6a056bad-6352-4157-8e58-433e7904b46f",
+      "bounds": {
+        "upperLeft": {
+          "x": 220.0,
+          "y": 590.0
+        },
+        "lowerRight": {
+          "x": 450.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 240.0,
+          "y": 630.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "93c8c8fa-a5b6-4b95-b1ad-90ec89e61ef1"
+        }
+      ],
+      "target": {
+        "resourceId": "93c8c8fa-a5b6-4b95-b1ad-90ec89e61ef1"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "e0ab8bbd-4b30-4b6a-85f3-bd2a3999a75f",
+      "bounds": {
+        "upperLeft": {
+          "x": 220.0,
+          "y": 30.0
+        },
+        "lowerRight": {
+          "x": 450.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 240.0,
+          "y": 70.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "21af7e4d-08b0-4789-acbf-708315955964"
+        }
+      ],
+      "target": {
+        "resourceId": "21af7e4d-08b0-4789-acbf-708315955964"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "e8413065-466f-4869-9009-3fa159271206",
+      "bounds": {
+        "upperLeft": {
+          "x": 220.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 450.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 240.0,
+          "y": 350.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "6f3cd4fe-9518-4276-a018-0088bea74570"
+        }
+      ],
+      "target": {
+        "resourceId": "6f3cd4fe-9518-4276-a018-0088bea74570"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "fceb180a-6334-4ba6-8ad1-b941534cbce1",
+      "bounds": {
+        "upperLeft": {
+          "x": 990.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 1250.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 1120.0,
+          "y": 910.0
+        },
+        {
+          "x": 1120.0,
+          "y": 350.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "b4c8c05f-8a4e-4d10-b2bb-026a93a6a918"
+        }
+      ],
+      "target": {
+        "resourceId": "b4c8c05f-8a4e-4d10-b2bb-026a93a6a918"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "6136200e-90b3-4e5c-a489-e739e4472305",
+      "bounds": {
+        "upperLeft": {
+          "x": 990.0,
+          "y": 750.0
+        },
+        "lowerRight": {
+          "x": 2340.0,
+          "y": 1090.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 2320.0,
+          "y": 1050.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+        }
+      ],
+      "target": {
+        "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "b6a11e46-3225-49bb-9510-6b1a10cff483",
+      "bounds": {
+        "upperLeft": {
+          "x": 350.0,
+          "y": 30.0
+        },
+        "lowerRight": {
+          "x": 610.0,
+          "y": 110.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "4312211c-41d9-485d-9637-5fa2795cdaf5"
+        }
+      ],
+      "target": {
+        "resourceId": "4312211c-41d9-485d-9637-5fa2795cdaf5"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "a7033a2a-ad18-41d8-96eb-d113b4ba0a6c",
+      "bounds": {
+        "upperLeft": {
+          "x": 670.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 930.0,
+          "y": 390.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "75daaf82-d31e-44ef-9267-63ce93163b56"
+        }
+      ],
+      "target": {
+        "resourceId": "75daaf82-d31e-44ef-9267-63ce93163b56"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "779d30fe-ba57-4fda-81b5-6f958c587fe5",
+      "bounds": {
+        "upperLeft": {
+          "x": 510.0,
+          "y": 30.0
+        },
+        "lowerRight": {
+          "x": 770.0,
+          "y": 110.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "5d0d4833-0d4c-4512-85db-174c195407b7"
+        }
+      ],
+      "target": {
+        "resourceId": "5d0d4833-0d4c-4512-85db-174c195407b7"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "4e7c5b18-fe29-48cc-b5fe-6e687a0838cc",
+      "bounds": {
+        "upperLeft": {
+          "x": 350.0,
+          "y": 590.0
+        },
+        "lowerRight": {
+          "x": 610.0,
+          "y": 670.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "1cff628c-0104-4851-bcd5-655cfd4b722d"
+        }
+      ],
+      "target": {
+        "resourceId": "1cff628c-0104-4851-bcd5-655cfd4b722d"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "9be87ae9-6797-4d30-8c29-cfa4f98748d5",
+      "bounds": {
+        "upperLeft": {
+          "x": 1980.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 2210.0,
+          "y": 390.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "286ea669-ddb5-4f5d-9dc9-edc5ff6c00ed"
+        }
+      ],
+      "target": {
+        "resourceId": "286ea669-ddb5-4f5d-9dc9-edc5ff6c00ed"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "4bcb8252-253b-4d92-8ba0-c0c6d19afc10",
+      "bounds": {
+        "upperLeft": {
+          "x": 1310.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 1570.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 1440.0,
+          "y": 910.0
+        },
+        {
+          "x": 1440.0,
+          "y": 350.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "5e4edd31-fa2c-4c92-ae25-7a5c7f9de107"
+        }
+      ],
+      "target": {
+        "resourceId": "5e4edd31-fa2c-4c92-ae25-7a5c7f9de107"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "e5c02e6c-8248-4d8f-adda-16e86182b6b2",
+      "bounds": {
+        "upperLeft": {
+          "x": 2110.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 2340.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 2320.0,
+          "y": 350.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+        }
+      ],
+      "target": {
+        "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "50fb161a-d559-4421-8dda-dc3152406e54",
+      "bounds": {
+        "upperLeft": {
+          "x": 65.0,
+          "y": 750.0
+        },
+        "lowerRight": {
+          "x": 260.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 15.0,
+          "y": 15.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "902d6911-66fe-4118-9166-5e63be663e75"
+        }
+      ],
+      "target": {
+        "resourceId": "902d6911-66fe-4118-9166-5e63be663e75"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "8b973654-4ab1-4352-9aa2-69731ed52db1",
+      "bounds": {
+        "upperLeft": {
+          "x": 350.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 610.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 480.0,
+          "y": 910.0
+        },
+        {
+          "x": 480.0,
+          "y": 350.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "dbae382f-2ccf-427e-a1f4-28e4eed662f8"
+        }
+      ],
+      "target": {
+        "resourceId": "dbae382f-2ccf-427e-a1f4-28e4eed662f8"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "925d2bc8-215d-4664-ac02-1024c7d903d1",
+      "bounds": {
+        "upperLeft": {
+          "x": 2300.0,
+          "y": 750.0
+        },
+        "lowerRight": {
+          "x": 2495.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 20.0,
+          "y": 20.0
+        },
+        {
+          "x": 15.0,
+          "y": 15.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "153439f4-6fae-4e4b-a862-a25adf3bfbf3"
+        }
+      ],
+      "target": {
+        "resourceId": "153439f4-6fae-4e4b-a862-a25adf3bfbf3"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "7113b6f6-31ec-459f-82bf-5b94d7df352a",
+      "bounds": {
+        "upperLeft": {
+          "x": 510.0,
+          "y": 170.0
+        },
+        "lowerRight": {
+          "x": 770.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 640.0,
+          "y": 210.0
+        },
+        {
+          "x": 640.0,
+          "y": 910.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "542d2689-338d-4061-b38c-69efcf3f4503"
+        }
+      ],
+      "target": {
+        "resourceId": "542d2689-338d-4061-b38c-69efcf3f4503"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "f231ea4a-cf74-484d-8ad9-76bcf5c18742",
+      "bounds": {
+        "upperLeft": {
+          "x": 1150.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 1410.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 1280.0,
+          "y": 350.0
+        },
+        {
+          "x": 1280.0,
+          "y": 910.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "4f8e50b7-fa43-4543-bdec-5dd6e3abf340"
+        }
+      ],
+      "target": {
+        "resourceId": "4f8e50b7-fa43-4543-bdec-5dd6e3abf340"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "31ce0372-d6e4-43ef-904d-886678929ce8",
+      "bounds": {
+        "upperLeft": {
+          "x": 830.0,
+          "y": 30.0
+        },
+        "lowerRight": {
+          "x": 2340.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 2320.0,
+          "y": 70.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+        }
+      ],
+      "target": {
+        "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "595618f9-6bb7-4c81-96e5-d0caa5a14d86",
+      "bounds": {
+        "upperLeft": {
+          "x": 670.0,
+          "y": 30.0
+        },
+        "lowerRight": {
+          "x": 930.0,
+          "y": 110.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "12c19375-69bf-47d1-ac96-2ef82d765e25"
+        }
+      ],
+      "target": {
+        "resourceId": "12c19375-69bf-47d1-ac96-2ef82d765e25"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "78d1a733-f072-4171-a5cb-a0aedd34db6c",
+      "bounds": {
+        "upperLeft": {
+          "x": 1470.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 1700.0,
+          "y": 390.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "269e8cab-2e43-4cfd-b09a-e1e983452261"
+        }
+      ],
+      "target": {
+        "resourceId": "269e8cab-2e43-4cfd-b09a-e1e983452261"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "acabfaa9-3bc1-41d7-bbcd-4d9da7c5597e",
+      "bounds": {
+        "upperLeft": {
+          "x": 670.0,
+          "y": 170.0
+        },
+        "lowerRight": {
+          "x": 930.0,
+          "y": 950.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 800.0,
+          "y": 910.0
+        },
+        {
+          "x": 800.0,
+          "y": 210.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "09d05dcf-4c2e-49fe-a5f8-8ad1222375f4"
+        }
+      ],
+      "target": {
+        "resourceId": "09d05dcf-4c2e-49fe-a5f8-8ad1222375f4"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "05ebad9f-2677-4fc5-bada-73d8cb5b2a8b",
+      "bounds": {
+        "upperLeft": {
+          "x": 830.0,
+          "y": 310.0
+        },
+        "lowerRight": {
+          "x": 2340.0,
+          "y": 790.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 2320.0,
+          "y": 350.0
+        },
+        {
+          "x": 20.0,
+          "y": 20.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+        }
+      ],
+      "target": {
+        "resourceId": "12fa1876-20a7-452b-88b3-4bdc153ff416"
+      },
+      "childShapes": []
+    },
+    {
+      "resourceId": "d03a4f32-b53b-4e5c-92cd-a359724fd351",
+      "bounds": {
+        "upperLeft": {
+          "x": 350.0,
+          "y": 170.0
+        },
+        "lowerRight": {
+          "x": 610.0,
+          "y": 390.0
+        }
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "dockers": [
+        {
+          "x": 50.0,
+          "y": 40.0
+        },
+        {
+          "x": 480.0,
+          "y": 350.0
+        },
+        {
+          "x": 480.0,
+          "y": 210.0
+        },
+        {
+          "x": 50.0,
+          "y": 40.0
+        }
+      ],
+      "properties": {},
+      "outgoing": [
+        {
+          "resourceId": "c8b1cb68-8571-47ee-93eb-353e666668c4"
+        }
+      ],
+      "target": {
+        "resourceId": "c8b1cb68-8571-47ee-93eb-353e666668c4"
+      },
+      "childShapes": []
+    }
+  ]
+}
