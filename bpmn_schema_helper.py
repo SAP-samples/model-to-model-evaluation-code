@@ -6,19 +6,19 @@ from typing import Any, Dict, List, Tuple, Union
 from sapsam_mapping import sapsam_mapping
 import json
 
-
-# Define types for better readability
-
 BPMNElement = Dict[str, Any]
 BPMNShape = Dict[str, Any]
 FlattenedBPMN = Dict[str, List[BPMNElement]]
 
 
 class BPMNProcessor:
-    """This class is used to flatten a Signavio BPMN diagram into a minimal json with the necessary elements found in the BPMN schema file."""
+    """This class is used to flatten a Signavio BPMN diagram into a minimal JSON with the necessary elements found in the BPMN schema file."""
 
     def __init__(self):
+        self.reset_elements()
 
+    def reset_elements(self):
+        """Resets the elements dictionary to its initial state."""
         self.elements: FlattenedBPMN = {
             "tasks": [],
             "events": [],
@@ -28,140 +28,132 @@ class BPMNProcessor:
             "sequenceFlows": [],
         }
 
-    def extract_element_info(self, shape: BPMNShape, parent_lane: str = "") -> BPMNElement:
+    def flatten_bpmn_rec(
+        self, shape: Union[str, BPMNShape], parent_lane: str = ""
+    ) -> "BPMNProcessor":
+        """Recursively flattens a BPMN diagram."""
+        if isinstance(shape, str):
+            shape = json.loads(shape)
 
-        element = {
-            "id": shape["resourceId"],
-            "name": shape["properties"].get("name", "").replace("\n", " ").strip(),
-            "outgoing": shape.get("outgoing", []),
-        }
+        # Extract basic element information
+        # print(shape["stencil"]["id"])
+        try:
+            element = {
+                "id": shape["resourceId"],
+                "name": shape["properties"].get("name", "").replace("\n", " ").strip(),
+                # "type": shape["stencil"]["id"],
+                "outgoing": shape.get("outgoing", []),
+            }
+            if parent_lane:
+                element["parent_lane"] = parent_lane
+        except:
+            print(f'Error in {shape["stencil"]["id"]} element')
 
-        if parent_lane:
-            element["parent_lane"] = parent_lane
-
-        return element
-
-    def process_element(self, shape: BPMNShape, element: BPMNElement, element_type: str):
+        # Extract specific element information based on the type
+        element_type = sapsam_mapping[shape["stencil"]["id"]]
         if element_type == "Events":
             assert len(shape.get("childShapes", [])) == 0, "Events don't have child shapes"
             element["type"] = shape["stencil"]["id"]
             self.elements["events"].append(element)
-
         elif element_type == "Activities":
             assert len(shape.get("childShapes", [])) == 0, "Activities don't have child shapes"
             task_type = shape["properties"].get("tasktype", None)
-
             if task_type == "None":
                 task_type = None
-
-            element["type"] = task_type if task_type else shape["stencil"]["id"]
+            if task_type:
+                element["type"] = task_type
+            else:
+                element["type"] = shape["stencil"]["id"]
             self.elements["tasks"].append(element)
-
         elif element_type == "Gateways":
             assert len(shape.get("childShapes", [])) == 0, "Gateways don't have child shapes"
-
-            gateway_type = (
-                shape["stencil"]["id"]
-                .replace("InclusiveGateway", "Inclusive")
-                .replace("Exclusive_Databased_Gateway", "Exclusive")
-                .replace("ParallelGateway", "Parallel")
-                .replace("EventbasedGateway", "Eventbased")
-                .replace("ComplexGateway", "Complex")
-            )
-
+            gateway_type = shape["stencil"]["id"]
+            if gateway_type == "InclusiveGateway":
+                gateway_type = "Inclusive"
+            elif gateway_type == "Exclusive_Databased_Gateway":
+                gateway_type = "Exclusive"
+            elif gateway_type == "ParallelGateway":
+                gateway_type = "Parallel"
+            elif gateway_type == "EventbasedGateway":
+                gateway_type = "Eventbased"
+            elif gateway_type == "ComplexGateway":
+                gateway_type = "Complex"
             element["type"] = gateway_type
-
             if not element["name"]:
                 del element["name"]
-
             self.elements["gateways"].append(element)
-
         elif element_type == "Sequence Flows":
             assert len(shape.get("childShapes", [])) == 0, "Sequence Flows don't have child shapes"
             element["targetRef"] = shape.get("target").get("resourceId")
             name = element.pop("name")
-
             if name:
                 element["condition"] = name
             self.elements["sequenceFlows"].append(element)
-
         elif element_type == "Message Flows":
             assert len(shape.get("childShapes", [])) == 0, "Message Flows don't have child shapes"
             element["targetRef"] = shape.get("target").get("resourceId")
             name = element.pop("name")
-
             if name:
                 element["label"] = name
             self.elements["messageFlows"].append(element)
-
         elif element_type == "Pools":
             element["lanes"] = []
             for lane in shape.get("childShapes", []):
-
                 assert (
                     sapsam_mapping[lane["stencil"]["id"]] == "Lanes"
                 ), "Pools should only have lanes as children"
-
                 assert (
                     len(lane.get("outgoing", [])) == 0
                 ), "Lanes should not have any outgoing elements"
-
                 lane_info = {
                     "id": lane["resourceId"],
                     "name": lane["properties"].get("name", "").strip(),
                 }
-
                 element["lanes"].append(lane_info)
-
                 for child in lane.get("childShapes", []):
                     self.flatten_bpmn_rec(child, lane["resourceId"])
             self.elements["pools"].append(element)
-
-    def flatten_bpmn_rec(self, shape: Union[str, BPMNShape], parent_lane: str = ""):
-        if isinstance(shape, str):
-            shape = json.loads(shape)
-
-        try:
-            element = self.extract_element_info(shape, parent_lane)
-
-        except:
-            print("Error in shape: ", shape["stencil"]["id"])
-
-        element_type = sapsam_mapping[shape["stencil"]["id"]]
-
-        if element_type == "Diagram":
+        elif element_type == "Diagram":
             for shapeRec in shape.get("childShapes", []):
                 self.flatten_bpmn_rec(shapeRec)
 
-        else:
-            self.process_element(shape, element, element_type)
+        return self
 
-    def polish_schema(self, flatted_bpmn: FlattenedBPMN):
-        for flow in flatted_bpmn.get("sequenceFlows", []) + flatted_bpmn.get("messageFlows", []):
-            for list in flatted_bpmn.values():
+    def polish_schema(self) -> "BPMNProcessor":
+        """Polishes the flattened BPMN schema."""
+        for flow in self.elements.get("sequenceFlows", []) + self.elements.get("messageFlows", []):
+            for list in self.elements.values():
                 for item in list:
                     for outgoing in item.get("outgoing", []):
-                        if flow.get("id") == outgoing.get("resourceId"):
+                        outgoingId = outgoing.get("resourceId")
+                        if flow.get("id") == outgoingId:
                             flow["sourceRef"] = item.get("id")
-
-        for list in flatted_bpmn.values():
+        for list in self.elements.values():
             for item in list:
-                item.pop("outgoing", None)
-
-        for pool in flatted_bpmn.get("pools", []):
+                item.pop("outgoing", None)  # Safely remove the 'outgoing' key if it exists
+        for pool in self.elements.get("pools", []):
             for lane in pool.get("lanes", []):
-                elementRefs = [
-                    item.get("id")
-                    for list in flatted_bpmn.values()
-                    for item in list
-                    if lane.get("id") == item.get("parent_lane", "")
-                ]
-
+                elementRefs = []
+                for list in self.elements.values():
+                    for item in list:
+                        if lane.get("id") == item.get("parent_lane", ""):
+                            elementRefs.append(item.get("id"))
                 lane["elemRefs"] = elementRefs
-
-        for list in flatted_bpmn.values():
+        for list in self.elements.values():
             for item in list:
-                item.pop("parent_lane", None)
+                if item.get("parent_lane", ""):
+                    del item["parent_lane"]
+        return self
+
+    def transform_to_bpmn_schema(self, json_data: Union[str, BPMNShape]) -> FlattenedBPMN:
+        """Transforms the given JSON excerpt into the defined BPMN schema."""
+        self.reset_elements()  # Reset elements before processing a new diagram
+        self.flatten_bpmn_rec(json_data).polish_schema()
+        return self.elements
+
+    def to_json(self) -> str:
+        """Converts the processed elements to a JSON string."""
+        return json.dumps(self.elements, indent=2)
 
 
 def get_element_by_id_from_sublist(bpmn_sublist, id):
