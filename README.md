@@ -1,41 +1,40 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/model-to-model-evaluation-code
+)](https://api.reuse.software/info/github.com/SAP-samples/model-to-model-evaluation-code
+)
 
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
-<!-- Please include descriptive title -->
-
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
+# BPMN model to model evaluation
 
 ## Description
-<!-- Please include SEO-friendly description -->
+This repository contains code for a multiset, model to model evaluation method for bpmn models.
+The evaluation method is based on semantic similarity of multisets within a bpmn model and stems from this [master thesis](https://github.com/SAP-samples/multimodal-generative-ai-for-bpm).
 
-## Requirements
 
-## Download and Installation
+## Requirements and set up
+
+The requirements are in this [pyproject.toml](./pyproject.toml) file. After cloning the repository, run:
+
+```shell
+poetry install
+```
+
+## Getting started
+
+This [notebook](./notebooks/code_usage.ipynb) shows how the evaluation module can be used to obtain a model to model similarity score. At a first step Signavio json models will be parsed into a minimal json format following this minimal bpmn [schema](./bpmn_schema.py.)
+
+Multisets will then be extracted from the minimal json and a semantic similarity score will be calculated.\
+The similarity score is an adjusted dice or jaccard set similarity score.
 
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+No known issue.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
- 
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+[Create an issue](https://github.com/SAP-samples/model-to-model-evaluation-code/issues) in this repository if you find a bug or have questions about the content.
+
+
 
 ## Contributing
 If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
 ## License
-Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0.
+

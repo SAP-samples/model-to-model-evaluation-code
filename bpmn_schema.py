@@ -1,4 +1,4 @@
-# simplified BPMN JSON schema that is the foundation for gound truth and LLM prompting.
+# simplified BPMN JSON schema.
 # it captures the most used BPMN elements as lists.
 # each element has an id, which allows cross-referencing of elements across the lists.
 bpmn_schema = {
