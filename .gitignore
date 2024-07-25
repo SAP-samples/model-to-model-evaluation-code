@@ -138,5 +138,5 @@ conf.py
 
 # vscode
 .vscode
-pyproject.toml
+
 poetry.lock
