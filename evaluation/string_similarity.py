@@ -44,11 +44,11 @@ def bert_cosine_optimized(t1, t2):
     return score[0][0]
 
 
-def tfid_cosine(text1, text2):
-    """context-ignoring similarity measure for two strings using tfid and cosine similarity"""
-    corpus = [text1, text2]
-    vectorizer = TfidfVectorizer()
-    trsfm = vectorizer.fit_transform(corpus)
-    cos_sim = cosine_similarity(trsfm[0:1], trsfm)
-    cos_sim = cos_sim[0][1]
-    return cos_sim
+# def tfid_cosine(text1, text2):
+#     """context-ignoring similarity measure for two strings using tfid and cosine similarity"""
+#     corpus = [text1, text2]
+#     vectorizer = TfidfVectorizer()
+#     trsfm = vectorizer.fit_transform(corpus)
+#     cos_sim = cosine_similarity(trsfm[0:1], trsfm)
+#     cos_sim = cos_sim[0][1]
+#     return cos_sim

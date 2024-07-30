@@ -11,7 +11,10 @@ def dice_list(list1, list2):
     if union == 0:
         return 1, 0
     dice = float(2 * intersection) / union
-    return dice, union
+    weight = (
+        (2 * len(set1) * len(set2)) / (len(set1) + len(set2)) if (len(set1) + len(set2)) != 0 else 0
+    )
+    return dice, weight  # len(set1) + len(set2)
 
 
 def jaccard_list(list1, list2):
@@ -22,7 +25,43 @@ def jaccard_list(list1, list2):
     if union == 0:
         return 1, 0
     jaccard = float(intersection) / union
-    return jaccard, union
+    weight = (
+        (2 * len(set1) * len(set2)) / (len(set1) + len(set2)) if (len(set1) + len(set2)) != 0 else 0
+    )
+
+    return jaccard, weight  # len(set1) + len(set2)
+
+
+def scores(list_1, list_2, score_type="precision"):
+    """list_1 is the ground truth, list_2 is the generated list"""
+    # Convert lists to sets
+    set1, set2 = set(list_1), set(list_2)
+
+    # Compute the intersection of the sets
+    intersection = set1.intersection(set2)
+    # Calculate precision
+    precision = len(intersection) / len(set2) if set2 else 0
+
+    # Calculate recall
+    recall = len(intersection) / len(set1) if set1 else 0
+
+    weight = (
+        (2 * len(set1) * len(set2)) / (len(set1) + len(set2)) if (len(set1) + len(set2)) != 0 else 0
+    )
+    # Calculate the F1 score
+    if precision + recall == 0:
+        f1 = 0  # To handle the case when both precision and recall are zero
+    else:
+        f1 = 2 * (precision * recall) / (precision + recall)
+
+    if score_type == "precision":
+        return precision, weight  # len(set1) + len(set2)
+    elif score_type == "recall":
+        return recall, weight  # len(set1) + len(set2)
+    elif score_type == "f1":
+        return f1, weight  # len(set1) + len(set2)
+    else:
+        raise ValueError("Invalid score type. Use 'precision', 'recall', or 'f1'.")
 
 
 def make_similar_items_equal(list1, list2, similarity_func=bert_cosine_optimized, threshold=0.7):
@@ -107,7 +146,11 @@ def similarity_SFA(list1, list2, method="dice", threshold=0.7):
 
     it applies first the function make_similar_items_equal which enables semantic awareness
     then it applies the function index_list which enables frequency awareness
-    and then it computes the similarity of the two transformed lists, either with dice or jaccard"""
+    and then it computes the similarity of the two transformed lists, either with dice or jaccard
+
+    list1: list of strings (ground truth)
+    list2: list of strings
+    method: "dice" or "jaccard" or "precision" or "recall" or "f1" """
 
     list1, list2 = make_similar_items_equal(list1, list2, threshold=threshold)
     list1, list2 = index_list(list1), index_list(list2)
@@ -115,3 +158,5 @@ def similarity_SFA(list1, list2, method="dice", threshold=0.7):
         return dice_list(list1, list2)
     elif method == "jaccard":
         return jaccard_list(list1, list2)
+    elif method == "precision" or method == "recall" or method == "f1":
+        return scores(list1, list2, score_type=method)

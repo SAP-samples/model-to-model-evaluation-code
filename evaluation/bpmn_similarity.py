@@ -72,9 +72,11 @@ def calculate_similarity_scores(
     task_names_sim, task_names_n_union = safe_similarity_SFA(
         sets1["task_names"], sets2["task_names"], method, similarity_threshold
     )
+
     task_types_sim, task_types_n_union = safe_similarity_SFA(
         sets1["task_types"], sets2["task_types"], method, similarity_threshold
     )
+
     tasks_overall_sim = calculate_weighted_score(
         [(task_names_sim, task_names_n_union), (task_types_sim, task_types_n_union)]
     )
@@ -82,9 +84,11 @@ def calculate_similarity_scores(
     event_names_sim, event_names_n_union = safe_similarity_SFA(
         sets1["event_names"], sets2["event_names"], method, similarity_threshold
     )
+
     event_types_sim, event_types_n_union = safe_similarity_SFA(
         sets1["event_types"], sets2["event_types"], method, similarity_threshold
     )
+
     events_overall_sim = calculate_weighted_score(
         [(event_names_sim, event_names_n_union), (event_types_sim, event_types_n_union)]
     )
@@ -92,9 +96,11 @@ def calculate_similarity_scores(
     gateway_names_sim, gateway_names_n_union = safe_similarity_SFA(
         sets1["gateway_names"], sets2["gateway_names"], method, similarity_threshold
     )
+
     gateway_types_sim, gateway_types_n_union = safe_similarity_SFA(
         sets1["gateway_types"], sets2["gateway_types"], method, similarity_threshold
     )
+
     gateways_overall_sim = calculate_weighted_score(
         [(gateway_names_sim, gateway_names_n_union), (gateway_types_sim, gateway_types_n_union)]
     )
@@ -102,9 +108,11 @@ def calculate_similarity_scores(
     sequence_flows_sim, sequence_flows_n_union = safe_similarity_SFA(
         sets1["seq_flows_str"], sets2["seq_flows_str"], method, similarity_threshold
     )
+
     message_flows_sim, message_flows_n_union = safe_similarity_SFA(
         sets1["mes_flows_str"], sets2["mes_flows_str"], method, similarity_threshold
     )
+
     flows_overall_sim = calculate_weighted_score(
         [(sequence_flows_sim, sequence_flows_n_union), (message_flows_sim, message_flows_n_union)]
     )
@@ -112,9 +120,11 @@ def calculate_similarity_scores(
     lanes_without_refs_sim, lanes_without_refs_n_union = safe_similarity_SFA(
         sets1["lanes"], sets2["lanes"], method, similarity_threshold
     )
+
     lanes_with_refs_sim, lanes_with_refs_n_union = safe_similarity_SFA(
         sets1["lanes_with_refs"], sets2["lanes_with_refs"], method, similarity_threshold
     )
+
     lanes_overall_sim = calculate_weighted_score(
         [
             (lanes_without_refs_sim, lanes_without_refs_n_union),
