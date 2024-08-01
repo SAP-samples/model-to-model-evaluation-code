@@ -17,10 +17,10 @@ poetry install
 
 ## Getting started
 
-This [notebook](./notebooks/code_usage.ipynb) shows how the evaluation module can be used to obtain a model to model similarity score. At a first step Signavio json models will be parsed into a minimal json format following this minimal bpmn [schema](./bpmn_schema.py.)
+This [notebook](./notebooks/code_usage.ipynb) shows how the evaluation module can be used to obtain a model to model similarity score. At a first step Signavio json models will be parsed into a minimal json format following this minimal bpmn [schema](./bpmn_schema.py.).
 
-Multisets will then be extracted from the minimal json and a semantic similarity score will be calculated.\
-The similarity score is an adjusted dice or jaccard set similarity score.
+Multisets will then be extracted from the minimal json and an overall similarity score will be calculated.\
+The similarity score is an adjusted dice or jaccard score. Additionally an adjusted precision, recall and f1 score can also be calculated. 
 
 ## Known Issues
 No known issue.
