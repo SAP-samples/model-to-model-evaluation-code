@@ -1,0 +1,120 @@
+{
+    "tasks": [
+        {
+            "id": "1",
+            "name": "claims officer registers claim",
+            "type": "User"
+        },
+        {
+            "id": "2",
+            "name": "claims officer examines claim",
+            "type": "User"
+        },
+        {
+            "id": "4",
+            "name": "senior claims officer marks the claim",
+            "type": "User"
+        },
+        {
+            "id": "5",
+            "name": "senior claims officer checks recommendation",
+            "type": "User"
+        },
+        {
+            "id": "6",
+            "name": "claims officer writes settlement recommendation",
+            "type": "User"
+        },
+        {
+            "id": "8",
+            "name": "the claim handling process proceeds",
+            "type": "User"
+        },
+        {
+            "id": "9",
+            "name": "senior claims officer sends recommendation back",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": "0",
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "10",
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "3",
+            "type": "Exclusive"
+        },
+        {
+            "id": "7",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": "0",
+            "targetRef": "1"
+        },
+        {
+            "id": "sf1",
+            "sourceRef": "1",
+            "targetRef": "2"
+        },
+        {
+            "id": "sf2",
+            "sourceRef": "2",
+            "targetRef": "3"
+        },
+        {
+            "id": "sf3",
+            "sourceRef": "4",
+            "targetRef": "5"
+        },
+        {
+            "id": "sf4",
+            "sourceRef": "5",
+            "targetRef": "6"
+        },
+        {
+            "id": "sf5",
+            "sourceRef": "6",
+            "targetRef": "7"
+        },
+        {
+            "id": "sf6",
+            "sourceRef": "7",
+            "targetRef": "8"
+        },
+        {
+            "id": "sf7",
+            "sourceRef": "7",
+            "targetRef": "9"
+        },
+        {
+            "id": "sf8",
+            "sourceRef": "9",
+            "targetRef": "3"
+        },
+        {
+            "id": "sf9",
+            "sourceRef": "8",
+            "targetRef": "10"
+        },
+        {
+            "id": "sf10",
+            "sourceRef": "3",
+            "targetRef": "4"
+        }
+    ],
+    "messageFlows": []
+}
