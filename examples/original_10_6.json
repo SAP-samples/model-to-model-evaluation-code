@@ -1,0 +1,90 @@
+{
+    "events": [
+        {
+            "id": "0",
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "7",
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "3",
+            "type": "Exclusive"
+        },
+        {
+            "id": "5",
+            "type": "Exclusive"
+        }
+    ],
+    "messageFlows": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": "0",
+            "targetRef": "1"
+        },
+        {
+            "id": "sf1",
+            "sourceRef": "1",
+            "targetRef": "2"
+        },
+        {
+            "id": "sf2",
+            "sourceRef": "2",
+            "targetRef": "3"
+        },
+        {
+            "id": "sf3",
+            "sourceRef": "3",
+            "targetRef": "4"
+        },
+        {
+            "id": "sf4",
+            "sourceRef": "3",
+            "targetRef": "6"
+        },
+        {
+            "id": "sf5",
+            "sourceRef": "4",
+            "targetRef": "5"
+        },
+        {
+            "id": "sf6",
+            "sourceRef": "6",
+            "targetRef": "5"
+        },
+        {
+            "id": "sf7",
+            "sourceRef": "5",
+            "targetRef": "7"
+        }
+    ],
+    "tasks": [
+        {
+            "id": "1",
+            "name": "MSPN sends dismissal",
+            "type": "User"
+        },
+        {
+            "id": "2",
+            "name": "MSPO reviews the dismissal",
+            "type": "User"
+        },
+        {
+            "id": "4",
+            "name": "MSPO rejects the dismissal",
+            "type": "User"
+        },
+        {
+            "id": "6",
+            "name": "MSPO confirms the dismissal",
+            "type": "User"
+        }
+    ]
+}
