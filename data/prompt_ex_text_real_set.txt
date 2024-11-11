@@ -1,0 +1,16 @@
+Category: Vending and Shipping
+Title: Ordering in an Online Shop  
+
+A customer that logs into an E-Shop system and has to wait for its login
+confirmation (its credentials are checked by the system). If the login was
+successful then the customer can continue to select products, else the shopping
+experience stops. After selecting a product the customer has to add it to a
+shopping cart, save the product and check if every product was already
+selected. These steps repeat until all products were selected. Then the order
+is finished by the shopping system and simultaneously payment and shipment for the order is prepared.
+For the payment the customer has to enter its payment data
+and has to wait until the bank confirms the payment.
+While waiting for the payment confirmation the customer can enter its
+shipping address (an independent billing address can be entered if the shipping
+address is not equal to the billing address) . Finally if the address and the
+payment steps are executed then the order will be finished by the system.

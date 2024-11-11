@@ -1,0 +1,11 @@
+Category: Manufacturing
+Title: Building a House
+
+You want to build a tree house. First you collect your requirements, and send
+them to a tree house architect. The architect sends you back a draft, which
+you refine multiple times with additional requirements. You then create the
+list of needed materials from the plan. These materials fall into several categories,
+you order them from several online stores. While the order is processed, you send messages
+to several of your friends to build the house. After the house is built, you send invitations
+for a tree house party to your friends. In order to buy the snacks for the party, a list
+of people that attend the party is created.

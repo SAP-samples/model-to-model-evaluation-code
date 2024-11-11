@@ -1,0 +1,56 @@
+{
+    "events": [
+        {
+            "id": "0",
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "4",
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "messageFlows": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": "0",
+            "targetRef": "1"
+        },
+        {
+            "id": "sf1",
+            "sourceRef": "1",
+            "targetRef": "2"
+        },
+        {
+            "id": "sf2",
+            "sourceRef": "2",
+            "targetRef": "3"
+        },
+        {
+            "id": "sf3",
+            "sourceRef": "3",
+            "targetRef": "4"
+        }
+    ],
+    "tasks": [
+        {
+            "id": "1",
+            "name": "INQ transmits the transaction data request",
+            "type": "User"
+        },
+        {
+            "id": "2",
+            "name": "IP checks the request",
+            "type": "User"
+        },
+        {
+            "id": "3",
+            "name": "IP answers the question",
+            "type": "User"
+        }
+    ]
+}

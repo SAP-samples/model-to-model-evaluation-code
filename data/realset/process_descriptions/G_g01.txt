@@ -1,0 +1,13 @@
+Category: Gaming
+Name: LAN Party
+
+You are planning a LAN party for 10 friends, so the first thing you have to do
+is to send invitations to these 10 friends. Next, you have to find out which
+games they want to play. As soon as you have received a list of games, you can
+appoint a date when the LAN party is going to happen. If 8 or more people agree
+on this date, you are good to continue. Else, you have to appoint another date,
+until 8 people are free to join you. While you find a date, you can find out if
+you have all the games your guests want to play. If some are missing, download
+them. Next, you should find out how much beer your friends will require. If you
+do not have enough, buy what's missing. After that, you can enjoy the LAN
+party.

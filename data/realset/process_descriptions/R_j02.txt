@@ -1,0 +1,11 @@
+Category: Repair and Service
+Title: Inspection of an Energy Drink Bottling Machine
+
+You develop an application that helps you with the inspection of a machine.
+After entering the type of the machine, and its serial number, the inspection
+can begin:
+
+* Questions are asked, and you have to input values.
+* Buttons are to be pressed, and values are automatically collected from the machine and
+shown to you.
+* Depending on the results, additional questions are asked (or not).

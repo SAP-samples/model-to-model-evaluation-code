@@ -1,0 +1,288 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "Create list of necessary parts",
+            "type": "User"
+        },
+        {
+            "id": "id-2",
+            "name": "Query Webshops for   necessary  parts",
+            "type": "User"
+        },
+        {
+            "id": "id-3",
+            "name": "Choose the shop wiht cheapest parts",
+            "type": "User"
+        },
+        {
+            "id": "id-4",
+            "name": "Make an order to the Webshop",
+            "type": "User"
+        },
+        {
+            "id": "id-5",
+            "name": "The webshop receives an order",
+            "type": "Service"
+        },
+        {
+            "id": "id-6",
+            "name": "The Manufacturer receives an order and starts buiding",
+            "type": "Manual"
+        },
+        {
+            "id": "id-7",
+            "name": "order the cheapest part",
+            "type": "User"
+        },
+        {
+            "id": "id-8",
+            "name": "order the part with faster delivery",
+            "type": "User"
+        },
+        {
+            "id": "id-9",
+            "name": "write an compliament email",
+            "type": "User"
+        },
+        {
+            "id": "id-10",
+            "name": "finish the project",
+            "type": "Manual"
+        },
+        {
+            "id": "id-11",
+            "name": "The webshop sends an invoice",
+            "type": "Service"
+        },
+        {
+            "id": "id-12",
+            "name": "The webshop delivers an order",
+            "type": "Manual"
+        },
+        {
+            "id": "id-13",
+            "name": "The webshop updates Inventory",
+            "type": "Service"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-14",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-15",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-16",
+            "name": "stock > 5?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-17",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-18",
+            "name": "stock < 5?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-19",
+            "name": "stock < 3?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-20",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-21",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-22",
+            "name": "stock = 0?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-23",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-24",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-25",
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "id-26",
+            "targetRef": "id-1",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-27",
+            "targetRef": "id-2",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-28",
+            "targetRef": "id-3",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-29",
+            "targetRef": "id-16",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-30",
+            "targetRef": "id-4",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-31",
+            "targetRef": "id-5",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-32",
+            "targetRef": "id-21",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-33",
+            "targetRef": "id-20",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-34",
+            "targetRef": "id-17",
+            "condition": "yes",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-35",
+            "targetRef": "id-23",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-36",
+            "targetRef": "id-23",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-37",
+            "targetRef": "id-17",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-38",
+            "targetRef": "id-20",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-39",
+            "targetRef": "id-21",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-40",
+            "targetRef": "id-10",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-15",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-24",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-11",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-44",
+            "targetRef": "id-25",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-45",
+            "targetRef": "id-6",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-46",
+            "targetRef": "id-25",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-47",
+            "targetRef": "id-12",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-13",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-25",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-22",
+            "condition": "no",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-18",
+            "condition": "no",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-7",
+            "condition": "yes",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-8",
+            "condition": "yes",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-9",
+            "condition": "yes",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-19",
+            "condition": "no",
+            "sourceRef": "id-22"
+        }
+    ]
+}

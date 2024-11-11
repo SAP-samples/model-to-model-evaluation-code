@@ -1,0 +1,10 @@
+Category: Repair and Service
+Title: DIY Repair of a Broken Smartphone Screen
+
+A nifty online tool helps you with repairing your Smartphone on your own.
+You start by entering the model and what is broken. The tool gives you the list
+of materials, the list of tools, and (for each part) several ordering choices.
+Some stuff you already have (e.g. some tools, screws). The tool also lets you contact friends
+if you can borrow / buy something for cheap from them. The rest you buy.
+Afterwards you receive instructions how to fix your phone. If it worked, send a review and/or video
+of you fixing it. If it hasn't worked out, you can send it to an expert.

@@ -1,0 +1,227 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "Develop basic design",
+            "type": "Manual"
+        },
+        {
+            "id": "id-2",
+            "name": "Order necessary Lego brick sets",
+            "type": "Service"
+        },
+        {
+            "id": "id-3",
+            "name": "Sort Lego bricks according to size",
+            "type": "Manual"
+        },
+        {
+            "id": "id-4",
+            "name": "Build subcomponents",
+            "type": "Manual"
+        },
+        {
+            "id": "id-5",
+            "name": "Continue building subcomponents",
+            "type": "Manual"
+        },
+        {
+            "id": "id-6",
+            "name": "Reorder Lego bricks",
+            "type": "Service"
+        },
+        {
+            "id": "id-7",
+            "name": "Test subcomponents",
+            "type": "Service"
+        },
+        {
+            "id": "id-8",
+            "name": "Assemble to machine",
+            "type": "Manual"
+        },
+        {
+            "id": "id-9",
+            "name": "Redesign subcomponent",
+            "type": "Task"
+        },
+        {
+            "id": "id-10",
+            "name": "Put big bricks in suitable container",
+            "type": "Manual"
+        },
+        {
+            "id": "id-11",
+            "name": "Put medium bricks in suitable container",
+            "type": "Manual"
+        },
+        {
+            "id": "id-12",
+            "name": "Put small bricks in suitable container",
+            "type": "Manual"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-13",
+            "name": "Build machine",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-14",
+            "name": "Finish machine",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-15",
+            "name": "Container empty?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-16",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-17",
+            "name": "Successful?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-18",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-19",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-20",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "id-21",
+            "targetRef": "id-1",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-22",
+            "targetRef": "id-2",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-23",
+            "targetRef": "id-3",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-24",
+            "targetRef": "id-15",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-25",
+            "targetRef": "id-16",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-26",
+            "targetRef": "id-16",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-27",
+            "targetRef": "id-5",
+            "condition": "No",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-28",
+            "targetRef": "id-6",
+            "condition": "Yes",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-29",
+            "targetRef": "id-17",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-30",
+            "targetRef": "id-18",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-31",
+            "targetRef": "id-9",
+            "condition": "No",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-32",
+            "targetRef": "id-10",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-33",
+            "targetRef": "id-19",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-34",
+            "targetRef": "id-20",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-35",
+            "targetRef": "id-11",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-36",
+            "targetRef": "id-12",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-37",
+            "targetRef": "id-19",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-38",
+            "targetRef": "id-19",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-39",
+            "targetRef": "id-14",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-40",
+            "targetRef": "id-4",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-20",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-8",
+            "condition": "Yes",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-7",
+            "sourceRef": "id-16"
+        }
+    ]
+}

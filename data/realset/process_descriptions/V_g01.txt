@@ -1,0 +1,12 @@
+Category: Vending and Shipping
+Title: Robotic Burger Seller near the University of Vienna
+
+The robot receives an order. It asks whether the customer wants a menu or just
+the burger. If he wants a menu, the robot starts preparing the drink, which
+depending on the size can take a variable amount of time. While doing so, he
+asks if you want fries or wedges. If you want fries, he prepares the fries; if
+you want wedges, he prepares wedges. Again the duration varies depending on the
+size fries/wedges order. After that, he prepares the burger, and gives you
+enthusiastic status updates every 30 seconds. Depending on the number of
+ingredients, the duration for creating the burger varies. Your order is delivered
+via a conveyor belt.

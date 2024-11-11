@@ -1,0 +1,363 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "Self-employed/studying/housewife/man",
+            "type": "Task"
+        },
+        {
+            "id": "id-2",
+            "name": "employed",
+            "type": "Task"
+        },
+        {
+            "id": "id-3",
+            "name": "Send employer notfication",
+            "type": "Send"
+        },
+        {
+            "id": "id-4",
+            "name": "Recieve employer confimation",
+            "type": "Receive"
+        },
+        {
+            "id": "id-5",
+            "name": "Take maternity leave",
+            "type": "User"
+        },
+        {
+            "id": "id-6",
+            "name": "Split maternity leave",
+            "type": "Task"
+        },
+        {
+            "id": "id-7",
+            "name": "Extend maternity leave",
+            "type": "Task"
+        },
+        {
+            "id": "id-8",
+            "name": "maternity leave less than 2 months",
+            "type": "Task"
+        },
+        {
+            "id": "id-9",
+            "name": "maternity leave more than 3 months",
+            "type": "Task"
+        },
+        {
+            "id": "id-10",
+            "name": "Send employer notification",
+            "type": "Send"
+        },
+        {
+            "id": "id-11",
+            "name": "Send employer notification",
+            "type": "Send"
+        },
+        {
+            "id": "id-12",
+            "name": "Recieve employer notification",
+            "type": "Receive"
+        },
+        {
+            "id": "id-13",
+            "name": "Both parents take maternity leave",
+            "type": "Task"
+        },
+        {
+            "id": "id-14",
+            "name": "Take maternity leave",
+            "type": "User"
+        },
+        {
+            "id": "id-15",
+            "name": "Parent",
+            "type": "Task"
+        },
+        {
+            "id": "id-16",
+            "name": "Baby younger than 2 years",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-17",
+            "name": "maternity leave possible but without payment",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-18",
+            "name": "Not possible",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-19",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-20",
+            "name": "maternity leave",
+            "type": "StartNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-21",
+            "name": "Self-employed or employed ?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-22",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-23",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-24",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-25",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-26",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-27",
+            "type": "Parallel"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-62",
+            "name": "Maternity leave application",
+            "lanes": [
+                {
+                    "id": "id-63",
+                    "name": "",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-7",
+                        "id-8",
+                        "id-9",
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-13",
+                        "id-14",
+                        "id-15",
+                        "id-16",
+                        "id-17",
+                        "id-18",
+                        "id-19",
+                        "id-20",
+                        "id-21",
+                        "id-22",
+                        "id-23",
+                        "id-24",
+                        "id-25",
+                        "id-26",
+                        "id-27"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-64",
+            "name": "Company",
+            "lanes": [
+                {
+                    "id": "id-65",
+                    "name": "CEO",
+                    "elemRefs": []
+                }
+            ]
+        }
+    ],
+    "messageFlows": [
+        {
+            "id": "id-57",
+            "targetRef": "id-64",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-58",
+            "targetRef": "id-4",
+            "sourceRef": "id-64"
+        },
+        {
+            "id": "id-59",
+            "targetRef": "id-12",
+            "sourceRef": "id-64"
+        },
+        {
+            "id": "id-60",
+            "targetRef": "id-64",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-61",
+            "targetRef": "id-64",
+            "sourceRef": "id-11"
+        }
+    ],
+    "sequenceFlows": [
+        {
+            "id": "id-28",
+            "targetRef": "id-1",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-29",
+            "targetRef": "id-2",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-30",
+            "targetRef": "id-17",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-31",
+            "targetRef": "id-4",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-32",
+            "targetRef": "id-5",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-33",
+            "targetRef": "id-22",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-34",
+            "targetRef": "id-6",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-35",
+            "targetRef": "id-8",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-36",
+            "targetRef": "id-10",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-37",
+            "targetRef": "id-11",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-38",
+            "targetRef": "id-9",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-39",
+            "targetRef": "id-24",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-40",
+            "targetRef": "id-24",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-12",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-18",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-7",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-44",
+            "targetRef": "id-13",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-45",
+            "targetRef": "id-25",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-46",
+            "targetRef": "id-25",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-47",
+            "targetRef": "id-23",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-14",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-19",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-3",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-26",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-16",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-15",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-27",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-27",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-56",
+            "targetRef": "id-21",
+            "sourceRef": "id-27"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+Category: Manufacturing
+Title: Instruct an artist to create a 3D model print it on a 3D printer
+
+When craving a custom 3D model, as a first step you have to instruct an artist
+to create a project for you.  First you have to send him several sketches, and
+then tell him what to change until you are satisfied with the result. After
+that, you choose a plastic color you want to use for 3D printing. If you have
+the color at home (in stock), you check how much color you have left. If it's
+under 100 grams, you put it on your shopping list. If you do not have the color
+at home, you order it. When you have the plastic, you can turn the printer on
+and heat up the bed and the extruder (it continuously sends you back its
+status). While doing that, you can generate the gcode file for your printer out
+of the STL sent to you by the artist. After that you print the model.

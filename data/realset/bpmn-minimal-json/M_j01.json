@@ -1,0 +1,337 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "Selection of properties of chainsaw",
+            "type": "Send"
+        },
+        {
+            "id": "id-2",
+            "name": "Receive order",
+            "type": "Receive"
+        },
+        {
+            "id": "id-3",
+            "name": "Manual Inspection",
+            "type": "Manual"
+        },
+        {
+            "id": "id-4",
+            "name": "Receive and analyze order",
+            "type": "User"
+        },
+        {
+            "id": "id-5",
+            "name": "Order parts",
+            "type": "Send"
+        },
+        {
+            "id": "id-6",
+            "name": "Check with suppliers",
+            "type": "User"
+        },
+        {
+            "id": "id-7",
+            "name": "Receive parts",
+            "type": "Receive"
+        },
+        {
+            "id": "id-8",
+            "name": "Assemble chainsaw",
+            "type": "Manual"
+        },
+        {
+            "id": "id-9",
+            "name": "Send first product to customer",
+            "type": "Send"
+        },
+        {
+            "id": "id-10",
+            "name": "Receive feedback",
+            "type": "Receive"
+        },
+        {
+            "id": "id-11",
+            "name": "Improve product",
+            "type": "Task"
+        },
+        {
+            "id": "id-12",
+            "name": "Send complete order to customer",
+            "type": "Send"
+        },
+        {
+            "id": "id-13",
+            "name": "Produce rest of order",
+            "type": "Manual"
+        },
+        {
+            "id": "id-14",
+            "name": "Monitor progress",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-15",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-16",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-17",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-18",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-19",
+            "name": "all parts received",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-20",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-21",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-22",
+            "type": "Parallel"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-54",
+            "name": "Customer",
+            "lanes": [
+                {
+                    "id": "id-55",
+                    "name": "",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-15",
+                        "id-16"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-56",
+            "name": "Manufacturer",
+            "lanes": [
+                {
+                    "id": "id-57",
+                    "name": "",
+                    "elemRefs": [
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-7",
+                        "id-8",
+                        "id-9",
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-13",
+                        "id-14",
+                        "id-17",
+                        "id-18",
+                        "id-19",
+                        "id-20",
+                        "id-21",
+                        "id-22"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-58",
+            "name": "Suppliers",
+            "lanes": [
+                {
+                    "id": "id-59",
+                    "name": "",
+                    "elemRefs": []
+                }
+            ]
+        }
+    ],
+    "messageFlows": [
+        {
+            "id": "id-45",
+            "targetRef": "id-4",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-46",
+            "targetRef": "id-58",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-47",
+            "targetRef": "id-7",
+            "sourceRef": "id-58"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-58",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-10",
+            "sourceRef": "id-54"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-2",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-54",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-54",
+            "label": "Send regular updates",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-54",
+            "label": "Send regular updates",
+            "sourceRef": "id-14"
+        }
+    ],
+    "sequenceFlows": [
+        {
+            "id": "id-23",
+            "targetRef": "id-1",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-24",
+            "targetRef": "id-5",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-25",
+            "targetRef": "id-7",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-26",
+            "targetRef": "id-4",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-27",
+            "targetRef": "id-3",
+            "condition": "Yes",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-28",
+            "targetRef": "id-19",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-29",
+            "targetRef": "id-7",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-30",
+            "targetRef": "id-8",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-31",
+            "targetRef": "id-9",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-32",
+            "targetRef": "id-10",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-33",
+            "targetRef": "id-20",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-34",
+            "targetRef": "id-9",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-35",
+            "targetRef": "id-16",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-36",
+            "targetRef": "id-14",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-37",
+            "targetRef": "id-13",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-38",
+            "targetRef": "id-22",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-39",
+            "targetRef": "id-22",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-40",
+            "targetRef": "id-12",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-18",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-11",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-21",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-44",
+            "targetRef": "id-6",
+            "condition": "No",
+            "sourceRef": "id-19"
+        }
+    ]
+}

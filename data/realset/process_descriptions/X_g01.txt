@@ -1,0 +1,13 @@
+Category: Miscellaneous
+Title: New Application for Registering for an USI course
+
+If you want to register for a course at the sports institute, you need to
+select a course. If slots are free, the system tells you the courses, and
+dates. Select one. Next, you need to check if you already have an account at
+the sports institute. If not, you need to check whether you are registered at
+an eligible university. If you are, register your account. If you are not,
+request an activation and wait for a response. As soon as you have an account,
+log into it. The application is also connected to your twitter account, and
+lets you tweet to friends who might want to join you, you can complete the
+registration for the course and provide the payment information. In the end, you
+will receive a course ticket.

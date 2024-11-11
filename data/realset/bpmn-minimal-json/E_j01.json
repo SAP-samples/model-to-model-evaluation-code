@@ -1,0 +1,539 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "Confirm job application",
+            "type": "Send"
+        },
+        {
+            "id": "id-2",
+            "name": "Rate job application",
+            "type": "Send"
+        },
+        {
+            "id": "id-3",
+            "name": "Negotiate interview",
+            "type": "Manual"
+        },
+        {
+            "id": "id-4",
+            "name": "Rate job seeker",
+            "type": "Manual"
+        },
+        {
+            "id": "id-5",
+            "name": "Hire prospective customers",
+            "type": "Manual"
+        },
+        {
+            "id": "id-6",
+            "name": "Receive job application",
+            "type": "Receive"
+        },
+        {
+            "id": "id-7",
+            "name": "Report application status",
+            "type": "Manual"
+        },
+        {
+            "id": "id-8",
+            "name": "go through job offers",
+            "type": "Manual"
+        },
+        {
+            "id": "id-9",
+            "name": "Apply",
+            "type": "Send"
+        },
+        {
+            "id": "id-10",
+            "name": "Enter probation phase",
+            "type": "User"
+        },
+        {
+            "id": "id-11",
+            "name": "Rate company",
+            "type": "Manual"
+        },
+        {
+            "id": "id-12",
+            "name": "Permanent Job",
+            "type": "User"
+        },
+        {
+            "id": "id-13",
+            "name": "Send job offers",
+            "type": "Send"
+        },
+        {
+            "id": "id-14",
+            "name": "Analyse reports",
+            "type": "Receive"
+        },
+        {
+            "id": "id-15",
+            "name": "Forward apply",
+            "type": "Send"
+        },
+        {
+            "id": "id-16",
+            "name": "Receive application rating",
+            "type": "Receive"
+        },
+        {
+            "id": "id-17",
+            "name": "Receive job confirmation",
+            "type": "Receive"
+        },
+        {
+            "id": "id-18",
+            "name": "Receive seeker rating",
+            "type": "Receive"
+        },
+        {
+            "id": "id-19",
+            "name": "Receive company rating",
+            "type": "Receive"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-20",
+            "name": "Start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-21",
+            "name": "Found no employee",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-22",
+            "name": "Found no employee",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-23",
+            "name": "Found employee",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-24",
+            "name": "Start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-25",
+            "name": "Found job",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-26",
+            "name": "Start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-27",
+            "name": "Conveyed job",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-28",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-29",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-30",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-31",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-32",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-33",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-34",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-35",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-36",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-37",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-38",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-39",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-91",
+            "name": "Company",
+            "lanes": [
+                {
+                    "id": "id-92",
+                    "name": "",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-20",
+                        "id-21",
+                        "id-22",
+                        "id-23",
+                        "id-28",
+                        "id-29",
+                        "id-30",
+                        "id-31"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-93",
+            "name": "Job Seeker",
+            "lanes": [
+                {
+                    "id": "id-94",
+                    "name": "",
+                    "elemRefs": [
+                        "id-7",
+                        "id-8",
+                        "id-9",
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-24",
+                        "id-25",
+                        "id-32",
+                        "id-33"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-95",
+            "name": "Job Plattform",
+            "lanes": [
+                {
+                    "id": "id-96",
+                    "name": "",
+                    "elemRefs": [
+                        "id-13",
+                        "id-14",
+                        "id-15",
+                        "id-16",
+                        "id-17",
+                        "id-18",
+                        "id-19",
+                        "id-26",
+                        "id-27",
+                        "id-34",
+                        "id-35",
+                        "id-36",
+                        "id-37",
+                        "id-38",
+                        "id-39"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [
+        {
+            "id": "id-83",
+            "targetRef": "id-8",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-84",
+            "targetRef": "id-14",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-85",
+            "targetRef": "id-15",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-86",
+            "targetRef": "id-6",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-87",
+            "targetRef": "id-16",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-88",
+            "targetRef": "id-17",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-89",
+            "targetRef": "id-19",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-90",
+            "targetRef": "id-18",
+            "sourceRef": "id-4"
+        }
+    ],
+    "sequenceFlows": [
+        {
+            "id": "id-40",
+            "targetRef": "id-7",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-8",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-9",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-1",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-44",
+            "targetRef": "id-2",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-45",
+            "targetRef": "id-29",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-46",
+            "targetRef": "id-29",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-47",
+            "targetRef": "id-32",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-7",
+            "condition": "declined",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-25",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-33",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-8",
+            "condition": "Company rated C or less",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-12",
+            "condition": "Company rated >C",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-10",
+            "condition": "accepted",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-30",
+            "sourceRef": "id-29"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-21",
+            "condition": "declined",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-56",
+            "targetRef": "id-3",
+            "condition": "accepted",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-57",
+            "targetRef": "id-5",
+            "condition": "accepted",
+            "sourceRef": "id-31"
+        },
+        {
+            "id": "id-58",
+            "targetRef": "id-22",
+            "condition": "declined",
+            "sourceRef": "id-31"
+        },
+        {
+            "id": "id-59",
+            "targetRef": "id-23",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-60",
+            "targetRef": "id-6",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-61",
+            "targetRef": "id-28",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-62",
+            "targetRef": "id-13",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-63",
+            "targetRef": "id-14",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-64",
+            "targetRef": "id-15",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-65",
+            "targetRef": "id-34",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-66",
+            "targetRef": "id-16",
+            "sourceRef": "id-34"
+        },
+        {
+            "id": "id-67",
+            "targetRef": "id-17",
+            "sourceRef": "id-34"
+        },
+        {
+            "id": "id-68",
+            "targetRef": "id-35",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-69",
+            "targetRef": "id-35",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-70",
+            "targetRef": "id-11",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-71",
+            "targetRef": "id-4",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-72",
+            "targetRef": "id-31",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-73",
+            "targetRef": "id-18",
+            "sourceRef": "id-36"
+        },
+        {
+            "id": "id-74",
+            "targetRef": "id-19",
+            "sourceRef": "id-36"
+        },
+        {
+            "id": "id-75",
+            "targetRef": "id-37",
+            "sourceRef": "id-35"
+        },
+        {
+            "id": "id-76",
+            "targetRef": "id-36",
+            "condition": "accepted",
+            "sourceRef": "id-37"
+        },
+        {
+            "id": "id-77",
+            "targetRef": "id-38",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-78",
+            "targetRef": "id-38",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-79",
+            "targetRef": "id-39",
+            "sourceRef": "id-38"
+        },
+        {
+            "id": "id-80",
+            "targetRef": "id-27",
+            "condition": "Company rating >C and seeker accepted",
+            "sourceRef": "id-39"
+        },
+        {
+            "id": "id-81",
+            "targetRef": "id-13",
+            "condition": "declined",
+            "sourceRef": "id-37"
+        },
+        {
+            "id": "id-82",
+            "targetRef": "id-13",
+            "condition": "declined",
+            "sourceRef": "id-39"
+        }
+    ]
+}

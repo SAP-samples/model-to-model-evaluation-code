@@ -1,0 +1,18 @@
+Category: Gaming
+Name: Farming Bot
+
+Players want to create custom farming bots, that help them gather
+resources. First you have to find out which resources you want. Up to
+10 resources in parallel can be collected, some resources are more urgently needed
+than others. Some resources are required to create tools that are needed to
+gather other resources. (create a custom logic of the dependencies in your game).
+
+After all preferences are collected, your bot starts farming. Sometimes, 
+random natural disasters strike and set your bot back. Whenever some milestones
+are reached, you are notified.
+
+During farming it is possible to update the list of to be farmed materials (at
+all times).
+
+After the bot is finished, you should be able to brag to selected friends
+and/or send them materials.

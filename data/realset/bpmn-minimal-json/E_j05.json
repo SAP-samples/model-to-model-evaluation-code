@@ -1,0 +1,598 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "Create account",
+            "type": "User"
+        },
+        {
+            "id": "id-2",
+            "name": "Specify basic information",
+            "type": "User"
+        },
+        {
+            "id": "id-3",
+            "name": "Browse bank account offers",
+            "type": "User"
+        },
+        {
+            "id": "id-4",
+            "name": "Provide data of Austrian residence",
+            "type": "User"
+        },
+        {
+            "id": "id-5",
+            "name": "Make plan about how to get appartment",
+            "type": "User"
+        },
+        {
+            "id": "id-6",
+            "name": "Browse open appartments",
+            "type": "User"
+        },
+        {
+            "id": "id-7",
+            "name": "Apply for a bank account",
+            "type": "Service"
+        },
+        {
+            "id": "id-8",
+            "name": "Upload form and attach bank approval",
+            "type": "User"
+        },
+        {
+            "id": "id-9",
+            "name": "Try to get appartment on your own",
+            "type": "Manual"
+        },
+        {
+            "id": "id-10",
+            "name": "Conduct virtual round-tour with landlord",
+            "type": "Service"
+        },
+        {
+            "id": "id-11",
+            "name": "Provide information for job / venture",
+            "type": "User"
+        },
+        {
+            "id": "id-12",
+            "name": "Browse list of open positions",
+            "type": "User"
+        },
+        {
+            "id": "id-13",
+            "name": "Send application",
+            "type": "Service"
+        },
+        {
+            "id": "id-14",
+            "name": "Sign contract",
+            "type": "Task"
+        },
+        {
+            "id": "id-15",
+            "name": "Upload appartment contract",
+            "type": "User"
+        },
+        {
+            "id": "id-16",
+            "name": "Create digital CV",
+            "type": "User"
+        },
+        {
+            "id": "id-17",
+            "name": "Attend job interview",
+            "type": "Manual"
+        },
+        {
+            "id": "id-18",
+            "name": "Negotiate contract",
+            "type": "Manual"
+        },
+        {
+            "id": "id-19",
+            "name": "Upload work contract and insurance docs",
+            "type": "Service"
+        },
+        {
+            "id": "id-20",
+            "name": "Send (re)application for RWR card",
+            "type": "Script"
+        },
+        {
+            "id": "id-21",
+            "name": "Decide about future",
+            "type": "Manual"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-22",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-23",
+            "name": "",
+            "type": "IntermediateMessageEventCatching"
+        },
+        {
+            "id": "id-24",
+            "name": "2 years until renewal",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-25",
+            "name": "bank account uploaded",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-26",
+            "name": "ended with no success",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-27",
+            "name": "RWR card  irrelevant",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-28",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-29",
+            "type": "Inclusive"
+        },
+        {
+            "id": "id-30",
+            "name": "has residence?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-31",
+            "name": "bank account  accepted",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-32",
+            "type": "Inclusive"
+        },
+        {
+            "id": "id-33",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-34",
+            "name": "Check if fits RWR  card regulations",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-35",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-36",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-37",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-38",
+            "name": "invite?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-39",
+            "name": "mutual interest  in rent?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-40",
+            "type": "Inclusive"
+        },
+        {
+            "id": "id-41",
+            "name": "worked out?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-42",
+            "name": "mutual interest  in cooperation?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-43",
+            "name": "agreement",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-44",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-45",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-46",
+            "name": "Wants to renew?",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-104",
+            "name": "User",
+            "lanes": [
+                {
+                    "id": "id-105",
+                    "name": "",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-7",
+                        "id-8",
+                        "id-9",
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-13",
+                        "id-14",
+                        "id-15",
+                        "id-16",
+                        "id-17",
+                        "id-18",
+                        "id-19",
+                        "id-20",
+                        "id-21",
+                        "id-22",
+                        "id-23",
+                        "id-24",
+                        "id-25",
+                        "id-26",
+                        "id-27",
+                        "id-28",
+                        "id-29",
+                        "id-30",
+                        "id-31",
+                        "id-32",
+                        "id-33",
+                        "id-34",
+                        "id-35",
+                        "id-36",
+                        "id-37",
+                        "id-38",
+                        "id-39",
+                        "id-40",
+                        "id-41",
+                        "id-42",
+                        "id-43",
+                        "id-44",
+                        "id-45",
+                        "id-46"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "id-47",
+            "targetRef": "id-1",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-2",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-29",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-30",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-14",
+            "condition": "yes",
+            "sourceRef": "id-39"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-32",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-5",
+            "condition": "no",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-40",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-15",
+            "sourceRef": "id-40"
+        },
+        {
+            "id": "id-56",
+            "targetRef": "id-31",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-57",
+            "targetRef": "id-8",
+            "condition": "yes",
+            "sourceRef": "id-31"
+        },
+        {
+            "id": "id-58",
+            "targetRef": "id-28",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-59",
+            "targetRef": "id-7",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-60",
+            "targetRef": "id-28",
+            "sourceRef": "id-31"
+        },
+        {
+            "id": "id-61",
+            "targetRef": "id-32",
+            "condition": "no",
+            "sourceRef": "id-39"
+        },
+        {
+            "id": "id-62",
+            "targetRef": "id-10",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-63",
+            "targetRef": "id-39",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-64",
+            "targetRef": "id-41",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-65",
+            "targetRef": "id-40",
+            "condition": "yes",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-66",
+            "targetRef": "id-6",
+            "condition": "use our tool",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-67",
+            "targetRef": "id-40",
+            "condition": "yes",
+            "sourceRef": "id-41"
+        },
+        {
+            "id": "id-68",
+            "targetRef": "id-32",
+            "condition": "no",
+            "sourceRef": "id-41"
+        },
+        {
+            "id": "id-69",
+            "targetRef": "id-9",
+            "condition": "on your own",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-70",
+            "targetRef": "id-3",
+            "condition": "needs bank account",
+            "sourceRef": "id-29"
+        },
+        {
+            "id": "id-71",
+            "targetRef": "id-33",
+            "sourceRef": "id-29"
+        },
+        {
+            "id": "id-72",
+            "targetRef": "id-4",
+            "condition": "provide residence info",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-73",
+            "targetRef": "id-34",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-74",
+            "targetRef": "id-12",
+            "sourceRef": "id-35"
+        },
+        {
+            "id": "id-75",
+            "targetRef": "id-16",
+            "sourceRef": "id-35"
+        },
+        {
+            "id": "id-76",
+            "targetRef": "id-36",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-77",
+            "targetRef": "id-36",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-78",
+            "targetRef": "id-37",
+            "sourceRef": "id-36"
+        },
+        {
+            "id": "id-79",
+            "targetRef": "id-13",
+            "sourceRef": "id-37"
+        },
+        {
+            "id": "id-80",
+            "targetRef": "id-42",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-81",
+            "targetRef": "id-37",
+            "condition": "no",
+            "sourceRef": "id-42"
+        },
+        {
+            "id": "id-82",
+            "targetRef": "id-38",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-83",
+            "targetRef": "id-17",
+            "condition": "yes",
+            "sourceRef": "id-38"
+        },
+        {
+            "id": "id-84",
+            "targetRef": "id-37",
+            "condition": "no",
+            "sourceRef": "id-38"
+        },
+        {
+            "id": "id-85",
+            "targetRef": "id-18",
+            "condition": "yes",
+            "sourceRef": "id-42"
+        },
+        {
+            "id": "id-86",
+            "targetRef": "id-43",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-87",
+            "targetRef": "id-37",
+            "condition": "no",
+            "sourceRef": "id-43"
+        },
+        {
+            "id": "id-88",
+            "targetRef": "id-19",
+            "condition": "yes",
+            "sourceRef": "id-43"
+        },
+        {
+            "id": "id-89",
+            "targetRef": "id-19",
+            "condition": "yes",
+            "sourceRef": "id-34"
+        },
+        {
+            "id": "id-90",
+            "targetRef": "id-35",
+            "condition": "no",
+            "sourceRef": "id-34"
+        },
+        {
+            "id": "id-91",
+            "targetRef": "id-44",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-92",
+            "targetRef": "id-20",
+            "sourceRef": "id-44"
+        },
+        {
+            "id": "id-93",
+            "targetRef": "id-23",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-94",
+            "targetRef": "id-45",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-95",
+            "targetRef": "id-46",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-96",
+            "targetRef": "id-24",
+            "sourceRef": "id-45"
+        },
+        {
+            "id": "id-97",
+            "targetRef": "id-21",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-98",
+            "targetRef": "id-44",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-99",
+            "targetRef": "id-25",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-100",
+            "targetRef": "id-26",
+            "sourceRef": "id-45"
+        },
+        {
+            "id": "id-101",
+            "targetRef": "id-11",
+            "condition": "provide job info",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-102",
+            "targetRef": "id-33",
+            "condition": "yes",
+            "sourceRef": "id-46"
+        },
+        {
+            "id": "id-103",
+            "targetRef": "id-27",
+            "condition": "no",
+            "sourceRef": "id-46"
+        }
+    ]
+}

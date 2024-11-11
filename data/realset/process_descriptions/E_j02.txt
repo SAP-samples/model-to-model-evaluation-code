@@ -1,0 +1,12 @@
+Category: E-Government
+Title: Becoming A Parent
+
+Create a process that support in planning, taking and extending a maternity
+leave.
+
+* Fetch information about potential models (months duration, split between parents)
+* Let parent select
+* Collect relevant information
+* Notify Social Security, Company in time
+* Gather information from companies
+* At the end of the period let parent decide about extension.

@@ -1,0 +1,183 @@
+{
+    "events": [
+        {
+            "id": "0",
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "16",
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "6",
+            "type": "Parallel"
+        },
+        {
+            "id": "8",
+            "type": "Parallel"
+        },
+        {
+            "id": "12",
+            "type": "Exclusive"
+        },
+        {
+            "id": "14",
+            "type": "Exclusive"
+        }
+    ],
+    "messageFlows": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": "0",
+            "targetRef": "1"
+        },
+        {
+            "id": "sf1",
+            "sourceRef": "1",
+            "targetRef": "2"
+        },
+        {
+            "id": "sf2",
+            "sourceRef": "2",
+            "targetRef": "3"
+        },
+        {
+            "id": "sf3",
+            "sourceRef": "3",
+            "targetRef": "4"
+        },
+        {
+            "id": "sf4",
+            "sourceRef": "4",
+            "targetRef": "5"
+        },
+        {
+            "id": "sf5",
+            "sourceRef": "5",
+            "targetRef": "6"
+        },
+        {
+            "id": "sf6",
+            "sourceRef": "6",
+            "targetRef": "7"
+        },
+        {
+            "id": "sf7",
+            "sourceRef": "6",
+            "targetRef": "9"
+        },
+        {
+            "id": "sf8",
+            "sourceRef": "7",
+            "targetRef": "8"
+        },
+        {
+            "id": "sf9",
+            "sourceRef": "9",
+            "targetRef": "8"
+        },
+        {
+            "id": "sf10",
+            "sourceRef": "8",
+            "targetRef": "10"
+        },
+        {
+            "id": "sf11",
+            "sourceRef": "10",
+            "targetRef": "11"
+        },
+        {
+            "id": "sf12",
+            "sourceRef": "11",
+            "targetRef": "12"
+        },
+        {
+            "id": "sf13",
+            "sourceRef": "13",
+            "targetRef": "14"
+        },
+        {
+            "id": "sf14",
+            "sourceRef": "15",
+            "targetRef": "14"
+        },
+        {
+            "id": "sf15",
+            "sourceRef": "12",
+            "targetRef": "13"
+        },
+        {
+            "id": "sf16",
+            "sourceRef": "12",
+            "targetRef": "15"
+        },
+        {
+            "id": "sf17",
+            "sourceRef": "14",
+            "targetRef": "16"
+        }
+    ],
+    "tasks": [
+        {
+            "id": "1",
+            "name": "guest calls",
+            "type": "User"
+        },
+        {
+            "id": "2",
+            "name": "manager takes down the order",
+            "type": "User"
+        },
+        {
+            "id": "3",
+            "name": "manager submits an order ticket to kitchen",
+            "type": "User"
+        },
+        {
+            "id": "4",
+            "name": "manager gives an order to the sommelier",
+            "type": "User"
+        },
+        {
+            "id": "5",
+            "name": "manager assigns the order to the waiter",
+            "type": "User"
+        },
+        {
+            "id": "7",
+            "name": "the kitchen and the sommelier are doing their tasks",
+            "type": "User"
+        },
+        {
+            "id": "9",
+            "name": "the waiter readies cart",
+            "type": "User"
+        },
+        {
+            "id": "10",
+            "name": "waiter delivers the cart",
+            "type": "User"
+        },
+        {
+            "id": "11",
+            "name": "waiter returns to the room service station",
+            "type": "User"
+        },
+        {
+            "id": "13",
+            "name": "waiter may wait to do the billing",
+            "type": "User"
+        },
+        {
+            "id": "15",
+            "name": "waiter debits the guest account",
+            "type": "User"
+        }
+    ]
+}

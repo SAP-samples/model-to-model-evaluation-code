@@ -1,0 +1,471 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "start  assesment tool",
+            "type": "Task"
+        },
+        {
+            "id": "id-2",
+            "name": "enter incident type",
+            "type": "Task"
+        },
+        {
+            "id": "id-3",
+            "name": "further specify incident",
+            "type": "Task"
+        },
+        {
+            "id": "id-4",
+            "name": "enter victim's data",
+            "type": "Task"
+        },
+        {
+            "id": "id-5",
+            "name": "execute proposed task",
+            "type": "Task"
+        },
+        {
+            "id": "id-6",
+            "name": "enter own data",
+            "type": "Task"
+        },
+        {
+            "id": "id-7",
+            "name": "propose tasks to user",
+            "type": "Task"
+        },
+        {
+            "id": "id-8",
+            "name": "tool starts",
+            "type": "Task"
+        },
+        {
+            "id": "id-9",
+            "name": "Accident",
+            "type": "Task"
+        },
+        {
+            "id": "id-10",
+            "name": "almost accident",
+            "type": "Task"
+        },
+        {
+            "id": "id-11",
+            "name": "severe safety risk / helth risk",
+            "type": "Task"
+        },
+        {
+            "id": "id-12",
+            "name": "defective protective equipment",
+            "type": "Task"
+        },
+        {
+            "id": "id-13",
+            "name": "add task: contact  Labour Inspectorate",
+            "type": "Task"
+        },
+        {
+            "id": "id-14",
+            "name": "add task; contact accident insurance",
+            "type": "Task"
+        },
+        {
+            "id": "id-15",
+            "name": "add task: contact superiors",
+            "type": "Task"
+        },
+        {
+            "id": "id-16",
+            "name": "add task: contact principal",
+            "type": "Task"
+        },
+        {
+            "id": "id-17",
+            "name": "add task: contact accident insurance",
+            "type": "Task"
+        },
+        {
+            "id": "id-18",
+            "name": "add task: contact priavte insurance",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-19",
+            "name": "incident happens",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-20",
+            "name": "everything done",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-21",
+            "name": "self employed &  accident happened to you ?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-22",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-23",
+            "name": "victim is student?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-24",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-25",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-26",
+            "name": "person killed/ severely injured?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-27",
+            "name": "already reported to  safety authorities?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-28",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-29",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-30",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-31",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-32",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-33",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-34",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-35",
+            "name": "victim has  private insurance?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-36",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-82",
+            "name": "Work Accirdent",
+            "lanes": [
+                {
+                    "id": "id-83",
+                    "name": "Human Action",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-7",
+                        "id-19",
+                        "id-20",
+                        "id-21",
+                        "id-22",
+                        "id-23"
+                    ]
+                },
+                {
+                    "id": "id-84",
+                    "name": "Computerized Action",
+                    "elemRefs": [
+                        "id-8",
+                        "id-9",
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-13",
+                        "id-14",
+                        "id-15",
+                        "id-16",
+                        "id-17",
+                        "id-18",
+                        "id-24",
+                        "id-25",
+                        "id-26",
+                        "id-27",
+                        "id-28",
+                        "id-29",
+                        "id-30",
+                        "id-31",
+                        "id-32",
+                        "id-33",
+                        "id-34",
+                        "id-35",
+                        "id-36"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "id-37",
+            "targetRef": "id-8",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-38",
+            "targetRef": "id-2",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-39",
+            "targetRef": "id-24",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-40",
+            "targetRef": "id-9",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-10",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-11",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-12",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-44",
+            "targetRef": "id-23",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-45",
+            "targetRef": "id-13",
+            "condition": "no",
+            "sourceRef": "id-27"
+        },
+        {
+            "id": "id-46",
+            "targetRef": "id-14",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-47",
+            "targetRef": "id-27",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-21",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-28",
+            "condition": "yes",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-29",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-29",
+            "condition": "yes",
+            "sourceRef": "id-27"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-30",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-30",
+            "sourceRef": "id-29"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-31",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-5",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-56",
+            "targetRef": "id-15",
+            "condition": "no",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-57",
+            "targetRef": "id-31",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-58",
+            "targetRef": "id-34",
+            "sourceRef": "id-31"
+        },
+        {
+            "id": "id-59",
+            "targetRef": "id-26",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-60",
+            "targetRef": "id-6",
+            "condition": "yes",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-61",
+            "targetRef": "id-21",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-62",
+            "targetRef": "id-4",
+            "condition": "no",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-63",
+            "targetRef": "id-3",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-64",
+            "targetRef": "id-25",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-65",
+            "targetRef": "id-25",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-66",
+            "targetRef": "id-25",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-67",
+            "targetRef": "id-25",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-68",
+            "targetRef": "id-22",
+            "condition": "no",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-69",
+            "targetRef": "id-17",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-70",
+            "targetRef": "id-16",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-71",
+            "targetRef": "id-32",
+            "condition": "yes",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-72",
+            "targetRef": "id-33",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-73",
+            "targetRef": "id-33",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-74",
+            "targetRef": "id-35",
+            "sourceRef": "id-34"
+        },
+        {
+            "id": "id-75",
+            "targetRef": "id-34",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-76",
+            "targetRef": "id-36",
+            "condition": "no",
+            "sourceRef": "id-35"
+        },
+        {
+            "id": "id-77",
+            "targetRef": "id-7",
+            "sourceRef": "id-36"
+        },
+        {
+            "id": "id-78",
+            "targetRef": "id-36",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-79",
+            "targetRef": "id-18",
+            "condition": "yes",
+            "sourceRef": "id-35"
+        },
+        {
+            "id": "id-80",
+            "targetRef": "id-20",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-81",
+            "targetRef": "id-1",
+            "sourceRef": "id-19"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+Category: Repair and Service
+Title: Service for Your Fridge
+
+Your fridge produces strange noises. You describe the symptoms, and send them
+together with the type of fridge to the central fridge service center.  They
+select a local service facility (which all have their own way of interacting
+with customers).
+
+The service facility makes an appointment. They arrive at a random time, and
+sometimes have to leave without repairing your fridge, because they need
+additional parts.
+
+After your fridge is repaired, you have to confirm that it is OK again. You
+can rate the service facility.

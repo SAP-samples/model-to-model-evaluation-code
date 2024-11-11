@@ -1,0 +1,634 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "check if car is still registered",
+            "type": "Service"
+        },
+        {
+            "id": "id-2",
+            "name": "notify car owner",
+            "type": "Service"
+        },
+        {
+            "id": "id-3",
+            "name": "check if car has been brought to mechanic",
+            "type": "Service"
+        },
+        {
+            "id": "id-4",
+            "name": "fine car owner",
+            "type": "Service"
+        },
+        {
+            "id": "id-5",
+            "name": "offer payment to car owner",
+            "type": "Service"
+        },
+        {
+            "id": "id-6",
+            "name": "transfer payment to mechanic",
+            "type": "Service"
+        },
+        {
+            "id": "id-7",
+            "name": "receive car problems",
+            "type": "Task"
+        },
+        {
+            "id": "id-8",
+            "name": "receive confirmation of successful repair",
+            "type": "Task"
+        },
+        {
+            "id": "id-9",
+            "name": "receive time for next service",
+            "type": "Task"
+        },
+        {
+            "id": "id-10",
+            "name": "check car",
+            "type": "Manual"
+        },
+        {
+            "id": "id-11",
+            "name": "enter car problems",
+            "type": "Manual"
+        },
+        {
+            "id": "id-12",
+            "name": "send updates",
+            "type": "Send"
+        },
+        {
+            "id": "id-13",
+            "name": "enter time for next service",
+            "type": "Manual"
+        },
+        {
+            "id": "id-14",
+            "name": "repair car",
+            "type": "Manual"
+        },
+        {
+            "id": "id-15",
+            "name": "receive payment",
+            "type": "Task"
+        },
+        {
+            "id": "id-16",
+            "name": "provide customer with Pickerl",
+            "type": "Manual"
+        },
+        {
+            "id": "id-17",
+            "name": "enter that repair succeeded",
+            "type": "Manual"
+        },
+        {
+            "id": "id-18",
+            "name": "determine payment amount",
+            "type": "Manual"
+        },
+        {
+            "id": "id-19",
+            "name": "bring car to service",
+            "type": "Manual"
+        },
+        {
+            "id": "id-20",
+            "name": "ignore notification",
+            "type": "Task"
+        },
+        {
+            "id": "id-21",
+            "name": "recieve fine",
+            "type": "Task"
+        },
+        {
+            "id": "id-22",
+            "name": "waiting for car to be repaired",
+            "type": "Task"
+        },
+        {
+            "id": "id-23",
+            "name": "receiving status updates",
+            "type": "Receive"
+        },
+        {
+            "id": "id-24",
+            "name": "pay via app",
+            "type": "Manual"
+        },
+        {
+            "id": "id-25",
+            "name": "pay cash/per card",
+            "type": "Manual"
+        },
+        {
+            "id": "id-26",
+            "name": "receive Pickerl",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-27",
+            "name": "succesfull sercive",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-28",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-29",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-30",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-31",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-32",
+            "name": "",
+            "type": "EndTerminateEvent"
+        },
+        {
+            "id": "id-33",
+            "name": "car arrives",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-34",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-35",
+            "name": "app notification",
+            "type": "StartMessageEvent"
+        },
+        {
+            "id": "id-36",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-37",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-38",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-39",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-40",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-41",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-42",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-43",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-44",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-45",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-46",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-47",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-48",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-109",
+            "name": "Police App",
+            "lanes": [
+                {
+                    "id": "id-110",
+                    "name": "",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-7",
+                        "id-8",
+                        "id-9",
+                        "id-27",
+                        "id-28",
+                        "id-29",
+                        "id-30",
+                        "id-31",
+                        "id-32",
+                        "id-39",
+                        "id-40",
+                        "id-41"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-111",
+            "name": "Mechanic",
+            "lanes": [
+                {
+                    "id": "id-112",
+                    "name": "",
+                    "elemRefs": [
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-13",
+                        "id-14",
+                        "id-15",
+                        "id-16",
+                        "id-17",
+                        "id-18",
+                        "id-33",
+                        "id-34",
+                        "id-42",
+                        "id-43"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-113",
+            "name": "Car owner",
+            "lanes": [
+                {
+                    "id": "id-114",
+                    "name": "",
+                    "elemRefs": [
+                        "id-19",
+                        "id-20",
+                        "id-21",
+                        "id-22",
+                        "id-23",
+                        "id-24",
+                        "id-25",
+                        "id-26",
+                        "id-35",
+                        "id-36",
+                        "id-37",
+                        "id-38",
+                        "id-44",
+                        "id-45",
+                        "id-46",
+                        "id-47",
+                        "id-48"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [
+        {
+            "id": "id-98",
+            "targetRef": "id-35",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-99",
+            "targetRef": "id-21",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-100",
+            "targetRef": "id-111",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-101",
+            "targetRef": "id-23",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-102",
+            "targetRef": "id-15",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-103",
+            "targetRef": "id-24",
+            "sourceRef": "id-109"
+        },
+        {
+            "id": "id-104",
+            "targetRef": "id-7",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-105",
+            "targetRef": "id-26",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-106",
+            "targetRef": "id-9",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-107",
+            "targetRef": "id-8",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-108",
+            "targetRef": "id-5",
+            "sourceRef": "id-18"
+        }
+    ],
+    "sequenceFlows": [
+        {
+            "id": "id-49",
+            "targetRef": "id-28",
+            "sourceRef": "id-27"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-1",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-39",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-2",
+            "condition": "registered",
+            "sourceRef": "id-39"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-3",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-4",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-44",
+            "sourceRef": "id-35"
+        },
+        {
+            "id": "id-56",
+            "targetRef": "id-19",
+            "sourceRef": "id-44"
+        },
+        {
+            "id": "id-57",
+            "targetRef": "id-20",
+            "sourceRef": "id-44"
+        },
+        {
+            "id": "id-58",
+            "targetRef": "id-21",
+            "sourceRef": "id-20"
+        },
+        {
+            "id": "id-59",
+            "targetRef": "id-10",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-60",
+            "targetRef": "id-11",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-61",
+            "targetRef": "id-42",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-62",
+            "targetRef": "id-12",
+            "sourceRef": "id-42"
+        },
+        {
+            "id": "id-63",
+            "targetRef": "id-14",
+            "sourceRef": "id-42"
+        },
+        {
+            "id": "id-64",
+            "targetRef": "id-43",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-65",
+            "targetRef": "id-34",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-66",
+            "targetRef": "id-45",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-67",
+            "targetRef": "id-22",
+            "sourceRef": "id-45"
+        },
+        {
+            "id": "id-68",
+            "targetRef": "id-23",
+            "sourceRef": "id-45"
+        },
+        {
+            "id": "id-69",
+            "targetRef": "id-36",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-70",
+            "targetRef": "id-46",
+            "sourceRef": "id-23"
+        },
+        {
+            "id": "id-71",
+            "targetRef": "id-46",
+            "sourceRef": "id-36"
+        },
+        {
+            "id": "id-72",
+            "targetRef": "id-43",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-73",
+            "targetRef": "id-37",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-74",
+            "targetRef": "id-40",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-75",
+            "targetRef": "id-47",
+            "sourceRef": "id-46"
+        },
+        {
+            "id": "id-76",
+            "targetRef": "id-24",
+            "sourceRef": "id-47"
+        },
+        {
+            "id": "id-77",
+            "targetRef": "id-25",
+            "sourceRef": "id-47"
+        },
+        {
+            "id": "id-78",
+            "targetRef": "id-13",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-79",
+            "targetRef": "id-48",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-80",
+            "targetRef": "id-48",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-81",
+            "targetRef": "id-26",
+            "sourceRef": "id-48"
+        },
+        {
+            "id": "id-82",
+            "targetRef": "id-38",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-83",
+            "targetRef": "id-41",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-84",
+            "targetRef": "id-6",
+            "condition": "payment via app",
+            "sourceRef": "id-41"
+        },
+        {
+            "id": "id-85",
+            "targetRef": "id-31",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-86",
+            "targetRef": "id-5",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-87",
+            "targetRef": "id-8",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-88",
+            "targetRef": "id-8",
+            "condition": "other payment",
+            "sourceRef": "id-41"
+        },
+        {
+            "id": "id-89",
+            "targetRef": "id-9",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-90",
+            "targetRef": "id-32",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-91",
+            "targetRef": "id-17",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-92",
+            "targetRef": "id-16",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-93",
+            "targetRef": "id-29",
+            "condition": "not registered",
+            "sourceRef": "id-39"
+        },
+        {
+            "id": "id-94",
+            "targetRef": "id-30",
+            "condition": "no car arrival",
+            "sourceRef": "id-40"
+        },
+        {
+            "id": "id-95",
+            "targetRef": "id-7",
+            "condition": "car arrival",
+            "sourceRef": "id-40"
+        },
+        {
+            "id": "id-96",
+            "targetRef": "id-18",
+            "sourceRef": "id-43"
+        },
+        {
+            "id": "id-97",
+            "targetRef": "id-15",
+            "sourceRef": "id-18"
+        }
+    ]
+}

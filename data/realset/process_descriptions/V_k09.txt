@@ -1,0 +1,16 @@
+Category: Vending and Shipping
+Title: Storage management
+
+First, the order is read from the automatic order management system. 
+Then, it's checked if the first product from the order is in stock. 
+If it's in stock then it's withdrawn from the warehouse.
+However, if it's not in stock then it's reordered from the wholesaler.
+Note, that if it was necessary to wait more then 10 days for the
+arrival of the  product then a delivery delay penalty is automatically demanded
+from the wholesaler. 
+After the ordered product has arrived it's registered in the stock management system. 
+Finally, it's checked if the whole order is ready for shipment. 
+If the order is ready for shipment, a courier is requested and the products are packed
+simultaneously and finally shipped. If it isn't then the next product from
+the order is selected and the process starts again with checking if this
+order is in stock or not. 

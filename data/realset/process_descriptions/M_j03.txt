@@ -1,0 +1,17 @@
+Category: Manufacturing
+Title: Contract
+
+For your contract project you need parts from several web shops. In order to
+find out which web shop has the right parts, you have to query them all, and
+find out how much they can deliver, at which price, and how long it will take.
+
+Create a list of parts that you order from each shop. If one shop has not enough 
+parts, order from several shops. Always use the cheapest parts.
+
+The parts arrive in batches in a random order, typically they are +/- 2 days
+earlier/later.  
+
+When the first parts arrive you start building. Sometimes you have to reorder parts.
+If your stock (for a single part) falls below 5, you reorder (the cheapest), if it
+falls below 3 you reorder again (the fastest). If it is zero, you write a mail
+to your friends, complaining about the webshops.

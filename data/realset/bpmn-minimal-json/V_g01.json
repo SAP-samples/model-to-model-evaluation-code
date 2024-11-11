@@ -1,0 +1,442 @@
+{
+    "tasks": [
+        {
+            "id": "id-1",
+            "name": "ask customer if he wants only a burger or a menu",
+            "type": "Service"
+        },
+        {
+            "id": "id-2",
+            "name": "prepare drink",
+            "type": "Service"
+        },
+        {
+            "id": "id-3",
+            "name": "ask whether customer wants wedges or fries",
+            "type": "Service"
+        },
+        {
+            "id": "id-4",
+            "name": "prepare fries",
+            "type": "Service"
+        },
+        {
+            "id": "id-5",
+            "name": "prepare wedges",
+            "type": "Service"
+        },
+        {
+            "id": "id-6",
+            "name": "prepares burger",
+            "type": "Service"
+        },
+        {
+            "id": "id-7",
+            "name": "gives enthusiastic status updates",
+            "type": "Service"
+        },
+        {
+            "id": "id-8",
+            "name": "puts order on conveyer belt",
+            "type": "Service"
+        },
+        {
+            "id": "id-9",
+            "name": "Gives an order",
+            "type": "User"
+        },
+        {
+            "id": "id-10",
+            "name": "tells if he wants a burger or a menu",
+            "type": "User"
+        },
+        {
+            "id": "id-11",
+            "name": "tells whether he wants wedges or fries",
+            "type": "User"
+        },
+        {
+            "id": "id-12",
+            "name": "takes order from convey belt",
+            "type": "User"
+        },
+        {
+            "id": "id-13",
+            "name": "listen to enthusiastic updates",
+            "type": "User"
+        },
+        {
+            "id": "id-14",
+            "name": "waiting for order to be completed",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": "id-15",
+            "name": "receives order",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-16",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-17",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-18",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-19",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-20",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "id-21",
+            "name": "",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "id-22",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "id-23",
+            "name": "",
+            "type": "EndTerminateEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "id-24",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-25",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-26",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-27",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-28",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-29",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-30",
+            "type": "Exclusive"
+        },
+        {
+            "id": "id-31",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-32",
+            "type": "Parallel"
+        },
+        {
+            "id": "id-33",
+            "type": "Parallel"
+        }
+    ],
+    "pools": [
+        {
+            "id": "id-76",
+            "name": "Robot",
+            "lanes": [
+                {
+                    "id": "id-77",
+                    "name": "",
+                    "elemRefs": [
+                        "id-1",
+                        "id-2",
+                        "id-3",
+                        "id-4",
+                        "id-5",
+                        "id-6",
+                        "id-7",
+                        "id-8",
+                        "id-15",
+                        "id-16",
+                        "id-17",
+                        "id-18",
+                        "id-19",
+                        "id-20",
+                        "id-21",
+                        "id-24",
+                        "id-25",
+                        "id-26",
+                        "id-27",
+                        "id-28",
+                        "id-29",
+                        "id-30",
+                        "id-31"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "id-78",
+            "name": "Customer",
+            "lanes": [
+                {
+                    "id": "id-79",
+                    "name": "",
+                    "elemRefs": [
+                        "id-9",
+                        "id-10",
+                        "id-11",
+                        "id-12",
+                        "id-13",
+                        "id-14",
+                        "id-22",
+                        "id-23",
+                        "id-32",
+                        "id-33"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [
+        {
+            "id": "id-71",
+            "targetRef": "id-76",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-72",
+            "targetRef": "id-10",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-73",
+            "targetRef": "id-11",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-74",
+            "targetRef": "id-12",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-75",
+            "targetRef": "id-13",
+            "sourceRef": "id-7"
+        }
+    ],
+    "sequenceFlows": [
+        {
+            "id": "id-34",
+            "targetRef": "id-9",
+            "sourceRef": "id-22"
+        },
+        {
+            "id": "id-35",
+            "targetRef": "id-1",
+            "sourceRef": "id-15"
+        },
+        {
+            "id": "id-36",
+            "targetRef": "id-10",
+            "sourceRef": "id-9"
+        },
+        {
+            "id": "id-37",
+            "targetRef": "id-24",
+            "sourceRef": "id-1"
+        },
+        {
+            "id": "id-38",
+            "targetRef": "id-2",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-39",
+            "targetRef": "id-3",
+            "sourceRef": "id-25"
+        },
+        {
+            "id": "id-40",
+            "targetRef": "id-11",
+            "sourceRef": "id-10"
+        },
+        {
+            "id": "id-41",
+            "targetRef": "id-25",
+            "condition": "menu",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-42",
+            "targetRef": "id-16",
+            "sourceRef": "id-2"
+        },
+        {
+            "id": "id-43",
+            "targetRef": "id-26",
+            "sourceRef": "id-3"
+        },
+        {
+            "id": "id-44",
+            "targetRef": "id-4",
+            "condition": "fries",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-45",
+            "targetRef": "id-5",
+            "condition": "wedges",
+            "sourceRef": "id-26"
+        },
+        {
+            "id": "id-46",
+            "targetRef": "id-17",
+            "sourceRef": "id-4"
+        },
+        {
+            "id": "id-47",
+            "targetRef": "id-18",
+            "sourceRef": "id-5"
+        },
+        {
+            "id": "id-48",
+            "targetRef": "id-27",
+            "sourceRef": "id-18"
+        },
+        {
+            "id": "id-49",
+            "targetRef": "id-27",
+            "sourceRef": "id-17"
+        },
+        {
+            "id": "id-50",
+            "targetRef": "id-28",
+            "sourceRef": "id-27"
+        },
+        {
+            "id": "id-51",
+            "targetRef": "id-28",
+            "sourceRef": "id-16"
+        },
+        {
+            "id": "id-52",
+            "targetRef": "id-29",
+            "sourceRef": "id-28"
+        },
+        {
+            "id": "id-53",
+            "targetRef": "id-6",
+            "sourceRef": "id-29"
+        },
+        {
+            "id": "id-54",
+            "targetRef": "id-19",
+            "sourceRef": "id-7"
+        },
+        {
+            "id": "id-55",
+            "targetRef": "id-30",
+            "sourceRef": "id-19"
+        },
+        {
+            "id": "id-56",
+            "targetRef": "id-21",
+            "sourceRef": "id-6"
+        },
+        {
+            "id": "id-57",
+            "targetRef": "id-31",
+            "condition": "burger prepared",
+            "sourceRef": "id-30"
+        },
+        {
+            "id": "id-58",
+            "targetRef": "id-32",
+            "sourceRef": "id-11"
+        },
+        {
+            "id": "id-59",
+            "targetRef": "id-23",
+            "sourceRef": "id-12"
+        },
+        {
+            "id": "id-60",
+            "targetRef": "id-13",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-61",
+            "targetRef": "id-33",
+            "sourceRef": "id-13"
+        },
+        {
+            "id": "id-62",
+            "targetRef": "id-14",
+            "sourceRef": "id-32"
+        },
+        {
+            "id": "id-63",
+            "targetRef": "id-12",
+            "sourceRef": "id-33"
+        },
+        {
+            "id": "id-64",
+            "targetRef": "id-33",
+            "sourceRef": "id-14"
+        },
+        {
+            "id": "id-65",
+            "targetRef": "id-8",
+            "sourceRef": "id-31"
+        },
+        {
+            "id": "id-66",
+            "targetRef": "id-20",
+            "sourceRef": "id-8"
+        },
+        {
+            "id": "id-67",
+            "targetRef": "id-29",
+            "condition": "burger",
+            "sourceRef": "id-24"
+        },
+        {
+            "id": "id-68",
+            "targetRef": "id-7",
+            "sourceRef": "id-29"
+        },
+        {
+            "id": "id-69",
+            "targetRef": "id-31",
+            "sourceRef": "id-21"
+        },
+        {
+            "id": "id-70",
+            "targetRef": "id-7",
+            "condition": "burger not yet prepared",
+            "sourceRef": "id-30"
+        }
+    ]
+}

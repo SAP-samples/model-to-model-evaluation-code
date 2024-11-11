@@ -1,0 +1,8 @@
+Category: Repair and Service
+Title: OEE
+
+Write a process, that collects relevant information from a machine, and
+calculated the Overall Equipment Efficiency (OEE). If the OEE falls below a
+certain value/percentage, stop the machine and send an email to an engineer.
+When the machine is restarted, continue measuring. When the machine is
+disconnected, stop the process.
