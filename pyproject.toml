@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "MODEL-TO-MODEL-EVALUATION-CODE"
+name = "llm-round-trip-correctness"
 version = "0.1.0"
 description = ""
 authors = ["raheleh <raheleh.hadian@sap.com>"]

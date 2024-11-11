@@ -1,6 +1,6 @@
 # similarity functions for comparing two lists
 
-from evaluation.string_similarity import bert_cosine_optimized
+from string_similarity import bert_cosine_optimized
 
 
 def dice_list(list1, list2):

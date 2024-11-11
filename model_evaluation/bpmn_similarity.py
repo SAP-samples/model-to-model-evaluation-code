@@ -2,7 +2,7 @@
 
 
 from bpmn_schema_helper import get_flows_with_values, get_lanes
-from evaluation.list_similarity import similarity_SFA
+from list_similarity import similarity_SFA
 from statistics import mean
 
 
