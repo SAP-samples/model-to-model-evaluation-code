@@ -2,39 +2,7 @@
 # from src.llm_connect.ask_open_ai import ask_gpt
 import json
 
-# """ prompt for model generation """
-# def create_prompt(description,set_of_rules,graph_type="mermaid.js"):
-#     prompt = "Process description: {}. {}. Considering provided process description and a set of custom rules create a valid {} graph.".format(description,set_of_rules,graph_type)
-#     prompt += "Only a valid graph without any additional text or information must be returned."
-#     if graph_type == "mermaid.js":
-#         prompt += "It is also prohibeted to return mermaid diagram with ```mermaid ``` notation!!!"
-#     return prompt
 
-# """ call llm to generate model """
-# def generate_model(model,description,graph_type="mermaid.js"):
-#     try:
-#         if "mermaid" in graph_type:
-#             set_of_rules = mermaid
-#         else:
-#             set_of_rules = graphviz
-#         prompt = create_prompt(description,set_of_rules,graph_type)
-#         response = ask_gpt(model,prompt)
-#         if "```mermaid" in response:
-#             response = response[response.find('\n')+1:response.rfind('\n')]
-#         return response
-#     except Exception as e:
-#         return e
-
-# """ call llm to generate json bpmn 2.0 model """
-# def generate_json_model(model,description):
-#     try:
-#         prompt = "Consider following process description:{} Convert this process description into json bpmn 2.0 model using this rules. {}".format(description,json_format)
-#         response = ask_gpt(model,prompt)
-#         return response
-#     except Exception as e:
-#         return e
-
-######################################################################
 
 def generate_prompt_gemini(path_to_json, path_to_text, bpmn_desc):
 
