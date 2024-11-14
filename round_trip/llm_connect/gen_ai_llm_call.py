@@ -1,11 +1,12 @@
-import json
-import os, sys
-import dotenv
-
 import concurrent.futures
+import json
+import logging
+import os
+import sys
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from functools import partial
-import logging
+
+import dotenv
 
 # Determine the directory of the current file
 current_dir = os.path.dirname(__file__)
@@ -22,8 +23,8 @@ print(dotenv_path)
 dotenv.load_dotenv(dotenv_path=dotenv_path)
 
 
-from gen_ai_hub.proxy.native.google_vertexai.clients import GenerativeModel
 from gen_ai_hub.proxy.core.proxy_clients import get_proxy_client
+from gen_ai_hub.proxy.native.google_vertexai.clients import GenerativeModel
 from gen_ai_hub.proxy.native.openai import chat
 
 CALL_TIMEOUT_SECONDS = 120
@@ -109,7 +110,7 @@ def generate_gpt(system_prompt, user_prompt, assistant_prompt, prompt, temperatu
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
         {"role": "assistant", "content": assistant_prompt},
-        {"role": "system", "content": prompt},
+        {"role": "user", "content": prompt},
     ]
     if response_format:
 
